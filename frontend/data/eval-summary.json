@@ -1,0 +1,406 @@
+[
+  {
+    "run_id": "20261007-1858_gemini-3.1-flash-lite_v3",
+    "created_at": "2026-10-07T18:58:51",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "prompt": "v3",
+    "judge": "gemini-3.5-flash-lite",
+    "partial": false,
+    "wall_time_s": 434,
+    "n_cases": 41,
+    "errors": 0,
+    "pass_rate": 0.951,
+    "by_check": {
+      "answer_excludes": {
+        "pass_rate": 1.0,
+        "n": 3
+      },
+      "answer_includes": {
+        "pass_rate": 1.0,
+        "n": 12
+      },
+      "answer_includes_any": {
+        "pass_rate": 1.0,
+        "n": 27
+      },
+      "asks_question": {
+        "pass_rate": 1.0,
+        "n": 2
+      },
+      "grounded_money": {
+        "pass_rate": 1.0,
+        "n": 41
+      },
+      "handoff": {
+        "pass_rate": 1.0,
+        "n": 3
+      },
+      "no_internal_notes": {
+        "pass_rate": 1.0,
+        "n": 41
+      },
+      "policy_retrieval": {
+        "pass_rate": 1.0,
+        "n": 8
+      },
+      "search_filters": {
+        "pass_rate": 1.0,
+        "n": 9
+      },
+      "tools_called": {
+        "pass_rate": 0.968,
+        "n": 31
+      },
+      "tools_not_called": {
+        "pass_rate": 0.667,
+        "n": 3
+      }
+    },
+    "by_category": {
+      "clarify": {
+        "pass_rate": 1.0,
+        "n": 2
+      },
+      "handoff": {
+        "pass_rate": 1.0,
+        "n": 4
+      },
+      "order": {
+        "pass_rate": 0.75,
+        "n": 4
+      },
+      "policy": {
+        "pass_rate": 1.0,
+        "n": 8
+      },
+      "product_detail": {
+        "pass_rate": 1.0,
+        "n": 4
+      },
+      "product_search": {
+        "pass_rate": 1.0,
+        "n": 10
+      },
+      "safety": {
+        "pass_rate": 1.0,
+        "n": 4
+      },
+      "shipping": {
+        "pass_rate": 0.8,
+        "n": 5
+      }
+    },
+    "latency_ms_median": 29807,
+    "latency_ms_p90": 45386,
+    "steps_avg": 2,
+    "tokens_in_avg": 3487,
+    "tokens_out_avg": 100,
+    "cost_usd_avg": 0.00102,
+    "judge_faithfulness_avg": 5,
+    "judge_helpfulness_avg": 5
+  },
+  {
+    "run_id": "20261007-1906_gemini-3.1-flash-lite_v1",
+    "created_at": "2026-10-07T19:06:49",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "prompt": "v1",
+    "judge": "gemini-3.5-flash-lite",
+    "partial": false,
+    "wall_time_s": 469,
+    "n_cases": 41,
+    "errors": 0,
+    "pass_rate": 0.927,
+    "by_check": {
+      "answer_excludes": {
+        "pass_rate": 1.0,
+        "n": 3
+      },
+      "answer_includes": {
+        "pass_rate": 1.0,
+        "n": 12
+      },
+      "answer_includes_any": {
+        "pass_rate": 0.963,
+        "n": 27
+      },
+      "asks_question": {
+        "pass_rate": 1.0,
+        "n": 2
+      },
+      "grounded_money": {
+        "pass_rate": 1.0,
+        "n": 41
+      },
+      "handoff": {
+        "pass_rate": 1.0,
+        "n": 3
+      },
+      "no_internal_notes": {
+        "pass_rate": 1.0,
+        "n": 41
+      },
+      "policy_retrieval": {
+        "pass_rate": 1.0,
+        "n": 8
+      },
+      "search_filters": {
+        "pass_rate": 1.0,
+        "n": 9
+      },
+      "tools_called": {
+        "pass_rate": 0.968,
+        "n": 31
+      },
+      "tools_not_called": {
+        "pass_rate": 0.667,
+        "n": 3
+      }
+    },
+    "by_category": {
+      "clarify": {
+        "pass_rate": 1.0,
+        "n": 2
+      },
+      "handoff": {
+        "pass_rate": 1.0,
+        "n": 4
+      },
+      "order": {
+        "pass_rate": 0.75,
+        "n": 4
+      },
+      "policy": {
+        "pass_rate": 0.875,
+        "n": 8
+      },
+      "product_detail": {
+        "pass_rate": 1.0,
+        "n": 4
+      },
+      "product_search": {
+        "pass_rate": 1.0,
+        "n": 10
+      },
+      "safety": {
+        "pass_rate": 1.0,
+        "n": 4
+      },
+      "shipping": {
+        "pass_rate": 0.8,
+        "n": 5
+      }
+    },
+    "latency_ms_median": 32396,
+    "latency_ms_p90": 50555,
+    "steps_avg": 1.95,
+    "tokens_in_avg": 2109,
+    "tokens_out_avg": 120,
+    "cost_usd_avg": 0.00071,
+    "judge_faithfulness_avg": 5,
+    "judge_helpfulness_avg": 5
+  },
+  {
+    "run_id": "20261007-1914_gemini-3.1-flash-lite_v2",
+    "created_at": "2026-10-07T19:14:26",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "prompt": "v2",
+    "judge": "gemini-3.5-flash-lite",
+    "partial": false,
+    "wall_time_s": 449,
+    "n_cases": 41,
+    "errors": 0,
+    "pass_rate": 0.927,
+    "by_check": {
+      "answer_excludes": {
+        "pass_rate": 1.0,
+        "n": 3
+      },
+      "answer_includes": {
+        "pass_rate": 1.0,
+        "n": 12
+      },
+      "answer_includes_any": {
+        "pass_rate": 0.963,
+        "n": 27
+      },
+      "asks_question": {
+        "pass_rate": 1.0,
+        "n": 2
+      },
+      "grounded_money": {
+        "pass_rate": 1.0,
+        "n": 41
+      },
+      "handoff": {
+        "pass_rate": 1.0,
+        "n": 3
+      },
+      "no_internal_notes": {
+        "pass_rate": 1.0,
+        "n": 41
+      },
+      "policy_retrieval": {
+        "pass_rate": 1.0,
+        "n": 8
+      },
+      "search_filters": {
+        "pass_rate": 1.0,
+        "n": 9
+      },
+      "tools_called": {
+        "pass_rate": 0.968,
+        "n": 31
+      },
+      "tools_not_called": {
+        "pass_rate": 0.667,
+        "n": 3
+      }
+    },
+    "by_category": {
+      "clarify": {
+        "pass_rate": 1.0,
+        "n": 2
+      },
+      "handoff": {
+        "pass_rate": 1.0,
+        "n": 4
+      },
+      "order": {
+        "pass_rate": 0.75,
+        "n": 4
+      },
+      "policy": {
+        "pass_rate": 1.0,
+        "n": 8
+      },
+      "product_detail": {
+        "pass_rate": 1.0,
+        "n": 4
+      },
+      "product_search": {
+        "pass_rate": 0.9,
+        "n": 10
+      },
+      "safety": {
+        "pass_rate": 1.0,
+        "n": 4
+      },
+      "shipping": {
+        "pass_rate": 0.8,
+        "n": 5
+      }
+    },
+    "latency_ms_median": 30086,
+    "latency_ms_p90": 48789,
+    "steps_avg": 1.98,
+    "tokens_in_avg": 3141,
+    "tokens_out_avg": 100,
+    "cost_usd_avg": 0.00093,
+    "judge_faithfulness_avg": 4.95,
+    "judge_helpfulness_avg": 5
+  },
+  {
+    "run_id": "20261007-1922_gemini-3.5-flash-lite_v3",
+    "created_at": "2026-10-07T19:22:20",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "prompt": "v3",
+    "judge": "gemini-3.5-flash-lite",
+    "partial": false,
+    "wall_time_s": 465,
+    "n_cases": 41,
+    "errors": 0,
+    "pass_rate": 0.78,
+    "by_check": {
+      "answer_excludes": {
+        "pass_rate": 1.0,
+        "n": 3
+      },
+      "answer_includes": {
+        "pass_rate": 1.0,
+        "n": 12
+      },
+      "answer_includes_any": {
+        "pass_rate": 1.0,
+        "n": 27
+      },
+      "asks_question": {
+        "pass_rate": 1.0,
+        "n": 2
+      },
+      "grounded_money": {
+        "pass_rate": 1.0,
+        "n": 41
+      },
+      "handoff": {
+        "pass_rate": 1.0,
+        "n": 3
+      },
+      "no_internal_notes": {
+        "pass_rate": 0.854,
+        "n": 41
+      },
+      "policy_retrieval": {
+        "pass_rate": 1.0,
+        "n": 8
+      },
+      "search_filters": {
+        "pass_rate": 0.889,
+        "n": 9
+      },
+      "tools_called": {
+        "pass_rate": 0.968,
+        "n": 31
+      },
+      "tools_not_called": {
+        "pass_rate": 0.667,
+        "n": 3
+      }
+    },
+    "by_category": {
+      "clarify": {
+        "pass_rate": 1.0,
+        "n": 2
+      },
+      "handoff": {
+        "pass_rate": 1.0,
+        "n": 4
+      },
+      "order": {
+        "pass_rate": 0.75,
+        "n": 4
+      },
+      "policy": {
+        "pass_rate": 1.0,
+        "n": 8
+      },
+      "product_detail": {
+        "pass_rate": 1.0,
+        "n": 4
+      },
+      "product_search": {
+        "pass_rate": 0.3,
+        "n": 10
+      },
+      "safety": {
+        "pass_rate": 1.0,
+        "n": 4
+      },
+      "shipping": {
+        "pass_rate": 0.8,
+        "n": 5
+      }
+    },
+    "latency_ms_median": 30203,
+    "latency_ms_p90": 55797,
+    "steps_avg": 2.24,
+    "tokens_in_avg": 4112,
+    "tokens_out_avg": 121,
+    "cost_usd_avg": 0.00154,
+    "judge_faithfulness_avg": 4.85,
+    "judge_helpfulness_avg": 5
+  }
+]

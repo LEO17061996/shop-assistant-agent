@@ -52,3 +52,9 @@ def test_shown_ids_survive_the_round_trip():
         ]
     )
     assert msgs[1].content.endswith("[shown: B07HZ1LXVM]")
+
+
+def test_copied_history_note_is_dropped_and_flagged():
+    msgs = to_messages([{"role": "assistant", "content": "Try these.\n[shown: B1, B2", "product_ids": ["B1"]}])
+    assert msgs[0].content == "Try these.\n[shown: B1]"
+    assert not run_checks(trace("Try these. [shown: B1]"), {})["no_internal_notes"]["pass"]

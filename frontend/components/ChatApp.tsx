@@ -28,7 +28,7 @@ const SUGGESTIONS = [
 
 const HISTORY_LIMIT = 12;
 // The model is told never to write these notes, but strip them if it does
-const SHOWN_NOTE = /\n?\[shown:[^\]]*\]/g;
+const SHOWN_NOTE = /\n?\[shown:[^\]]*\]?/g; // the "]?" also hides a note that is still streaming in
 
 function toHistory(turns: Turn[]): HistoryItem[] {
   return turns

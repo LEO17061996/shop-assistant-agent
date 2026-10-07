@@ -50,6 +50,10 @@ Reading every failure of the first full run showed some failures were the grader
 5. The judge was not shown the system prompt, so it marked facts taken from it as invented. It now sees it.
 6. "I don't see a 'Kestrel Cloud Sofa' in our catalog" is a correct refusal; "don't see" and similar were added.
 
+One change went the other way, making the grader stricter:
+
+7. The judge gave faithfulness 2 to an answer ending in "[shown: B07J2R9Y7F, …" — the internal history note the prompt tells the model never to write. No code check looked for it. `no_internal_notes` now runs on every case; re-grading the saved runs found it in 6 answers from Gemini 3.5 Flash-Lite and none from 3.1 Flash-Lite.
+
 ## Tool changes (bugs in the tool design)
 
 | Failure | Fix |
@@ -69,6 +73,10 @@ Reading every failure of the first full run showed some failures were the grader
 | "Let me try that again:" leaked into answers | Do not narrate tool use |
 
 `v2` itself added a currency rule after a trial run where the model wrote shipping as "£24.95 ($24.95)".
+
+## Results
+
+The tables are in the top-level README (written by `python -m eval.report`) and on the `/eval` page with every answer. In short: Gemini 3.1 Flash-Lite with prompt v3 passes 39 of 41 (95%); the two-sentence prompt v1 passes 38; Gemini 3.5 Flash-Lite passes 32 because it leaks the history note. The run before the category fix is kept in `archive/` (37 of 41 under the current checks).
 
 ## Model choice and the free tier
 

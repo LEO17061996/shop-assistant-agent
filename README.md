@@ -4,7 +4,9 @@ A customer-support agent for a (fictional) furniture store that ships to the US 
 
 **Live demo:** _coming soon_ · **Eval report:** `/eval` · **How it works:** `/how-it-works`
 
-![Chat with the agent ledger](docs/screenshot-chat.png)
+> The live demo runs on the Gemini free tier. Its response time varies a lot (from a few seconds to tens of seconds per model call, sometimes a timeout), so a slow answer is the free tier, not the agent. The ledger shows where the time went.
+
+![Chat with the agent ledger](docs/screenshot-chat.jpg)
 
 ## What it does
 
@@ -20,7 +22,27 @@ A customer-support agent for a (fictional) furniture store that ships to the US 
 See [`backend/eval/README.md`](backend/eval/README.md) for how the eval works, the grader bugs found along the way, and why each prompt rule exists.
 
 <!-- RESULTS:START -->
-_Filled in from `backend/eval/results/summary.json`._
+Agent eval: 41 questions, code checks decide pass/fail, judge = gemini-3.5-flash-lite (1–5).
+
+| Model | Prompt | Pass | Faithful | Helpful | Median time | Model calls | Cost / question* |
+|---|---|---:|---:|---:|---:|---:|---:|
+| Gemini 3.1 Flash-Lite | v3 | **95%** | 5 | 5 | 29.8s | 2 | $0.0010 |
+| Gemini 3.1 Flash-Lite | v1 | **93%** | 5 | 5 | 32.4s | 1.95 | $0.0007 |
+| Gemini 3.1 Flash-Lite | v2 | **93%** | 4.95 | 5 | 30.1s | 1.98 | $0.0009 |
+| Gemini 3.5 Flash-Lite | v3 | **78%** | 4.85 | 5 | 30.2s | 2.24 | $0.0015 |
+
+*Paid-tier list price for the tokens used; the demo itself runs on the free tier. Times include free-tier queueing (12 requests/minute per model).
+
+Retrieval eval: 80 shopper-style queries, no model in the loop.
+
+| Search | hit@1 | hit@5 | MRR |
+|---|---:|---:|---:|
+| dense | 88% | 98% | 0.91 |
+| sparse | 89% | 99% | 0.94 |
+| hybrid | 91% | 100% | 0.95 |
+| dense + category filter | 88% | 98% | 0.92 |
+| sparse + category filter | 89% | 99% | 0.94 |
+| hybrid + category filter | 91% | 100% | 0.95 |
 <!-- RESULTS:END -->
 
 ## Architecture
@@ -47,7 +69,7 @@ pip install -r requirements-dev.txt
 cp .env.example .env                              # add GEMINI_API_KEY
 python scripts/build_index.py                     # embeds catalog + policies into ./.qdrant
 uvicorn app.main:app --port 8077
-pytest -q                                         # 35 tests, no API key needed
+pytest -q                                         # 37 tests, no API key needed
 ```
 
 Frontend (Node 22):

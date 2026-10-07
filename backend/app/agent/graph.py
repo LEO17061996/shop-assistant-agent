@@ -11,6 +11,7 @@ trimmed to a token budget before each model call.
 """
 
 import asyncio
+import re
 import time
 from functools import lru_cache
 from typing import Annotated, TypedDict
@@ -33,6 +34,9 @@ GIVE_UP_TEXT = (
 )
 
 
+SHOWN_NOTE = re.compile(r"\n?\[shown:[^\]]*\]?")
+
+
 class AgentState(TypedDict):
     messages: Annotated[list[AnyMessage], add_messages]
     steps: int
@@ -51,7 +55,8 @@ def to_messages(history: list[dict]) -> list[AnyMessage]:
         else:
             ids = m.get("product_ids") or []
             note = f"\n[shown: {', '.join(ids)}]" if ids else ""
-            out.append(AIMessage(m["content"] + note))
+            # A model occasionally copies the note into its own reply; drop that copy so notes never stack up
+            out.append(AIMessage(SHOWN_NOTE.sub("", m["content"]) + note))
     return out
 
 

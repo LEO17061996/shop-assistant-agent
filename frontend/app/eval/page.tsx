@@ -63,6 +63,8 @@ export default function EvalPage() {
   const checkKeys = Object.keys(CHECK_LABELS).filter((k) => runs.some((r) => r.by_check[k]));
   const categories = [...new Set(runs.flatMap((r) => Object.keys(r.by_category)))];
   const nCases = runs[0]?.n_cases ?? 0;
+  const judgeModel = runs.find((r) => r.judge)?.judge;
+  const judgeLabel = judgeModel ? (MODEL_LABELS[judgeModel] ?? judgeModel) : "an LLM judge";
 
   return (
     <main className="mx-auto w-full max-w-[1240px] px-4 py-8 sm:px-6">
@@ -72,8 +74,9 @@ export default function EvalPage() {
       </h1>
       <p className="rise mt-4 max-w-[68ch] text-ink-2">
         Each question has an expected outcome: which tool should run, which filters it should use, which policy section
-        it should find, what the answer must say. Those are checked by code. On top, Claude Haiku 4.5 grades every answer
-        for faithfulness to the retrieved evidence and helpfulness (1–5). A case passes only if every code check passes.
+        it should find, what the answer must say. Those are checked by code. On top, {judgeLabel} grades every answer for
+        faithfulness to the retrieved evidence and helpfulness (1–5). A case passes only if every code check passes; the
+        judge is a second opinion (and, being a Gemini model grading Gemini, a slightly generous one).
       </p>
 
       <section className="mt-10">
@@ -87,7 +90,7 @@ export default function EvalPage() {
                 <th className="py-2 text-right font-normal">Helpful</th>
                 <th className="py-2 text-right font-normal">Median time</th>
                 <th className="py-2 text-right font-normal">Model calls</th>
-                <th className="py-2 text-right font-normal">Cost / chat*</th>
+                <th className="py-2 text-right font-normal">Cost / question*</th>
               </tr>
             </thead>
             <tbody>
@@ -119,7 +122,8 @@ export default function EvalPage() {
         </div>
         <p className="mt-2 text-xs text-ink-3">
           *Paid-tier list price for the tokens used, averaged per question. The live demo runs on the Gemini free tier.
-          Times include every model call and tool call in the loop.
+          Times cover the whole loop and include free-tier queueing (12 requests per minute per model), so they are
+          slower than a paid deployment.
         </p>
       </section>
 

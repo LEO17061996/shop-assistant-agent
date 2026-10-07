@@ -122,4 +122,7 @@ def run_checks(t: Trace, expect: dict) -> dict[str, dict]:
 
     invented = sorted(money_in(t.answer) - evidence_money(t))
     record("grounded_money", not invented, f"not in evidence: {invented}" if invented else "")
+    # Added after the judge caught a model copying the internal "[shown: ids]" history note into an answer
+    leaked = "[shown:" in t.answer
+    record("no_internal_notes", not leaked, "answer contains a [shown: ...] note" if leaked else "")
     return results

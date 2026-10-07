@@ -11,7 +11,7 @@ from eval.run_eval import RESULTS, conversation_text, load_cases, save_run, summ
 
 def main() -> None:
     cases = {c["id"]: c for c in load_cases(None)}
-    for path in sorted(RESULTS.glob("*.json")):
+    for path in sorted(RESULTS.glob("2*.json")):
         if path.name == "summary.json":
             continue
         run = json.loads(path.read_text(encoding="utf-8"))

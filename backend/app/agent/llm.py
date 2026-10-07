@@ -28,9 +28,12 @@ def model_name(provider: str) -> str:
 @lru_cache
 def rate_limiter(model: str) -> InMemoryRateLimiter | None:
     """One token bucket per model per process. Free-tier quotas are per model per minute, so
-    callers wait their turn here instead of failing with 429."""
+    callers wait their turn here instead of failing with 429.
+
+    The bucket holds 4 tokens so one customer's turn (usually 2-3 model calls) runs without
+    waiting, while sustained traffic still averages out at the per-minute cap."""
     rpm = get_settings().llm_requests_per_minute
-    return InMemoryRateLimiter(requests_per_second=rpm / 60, max_bucket_size=1) if rpm else None
+    return InMemoryRateLimiter(requests_per_second=rpm / 60, max_bucket_size=4) if rpm else None
 
 
 def make_llm(provider: str | None = None, model: str | None = None) -> BaseChatModel:
