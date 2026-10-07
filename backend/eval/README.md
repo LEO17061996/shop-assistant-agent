@@ -78,6 +78,20 @@ One change went the other way, making the grader stricter:
 
 The tables are in the top-level README (written by `python -m eval.report`) and on the `/eval` page with every answer. In short: Gemini 3.1 Flash-Lite with prompt v3 passes 39 of 41 (95%); the two-sentence prompt v1 passes 38; Gemini 3.5 Flash-Lite passes 32 because it leaks the history note. The run before the category fix is kept in `archive/` (37 of 41 under the current checks).
 
+## Listing Studio eval (`studio_eval.py`, `image_baseline.py`)
+
+Ground truth is the ABO catalog itself, a few products per category:
+
+- **Vision:** category, colour and material read from the catalog photo, compared with the catalog's values (colours and materials are grouped into families first, so "navy blue" matches "Blue").
+- **Copy:** rule violations in the first draft and after the repair loop; an LLM judge lists claims in the final copy that the facts and seller notes do not support.
+- **Visual search:** a *different* photo of the same product is the query; the rank of the product in the results is recorded. `image_baseline.py` runs the same test with four local image-embedding models on all 435 products that have a second photo.
+
+Caveats, stated up front:
+
+- The in-pipeline claim checker and the eval judge are the same model (Gemini 3.5 Flash-Lite), because Gemini 2.5 is closed to API projects created after mid-2026. After the claim check the judge mostly agrees with itself, so the useful comparison is `--no-claim-check` vs the default run, both judged the same way.
+- The first run hit the free tier's 500 requests/day for Gemini 3.1 Flash-Lite after 23 of 40 products. `--retry-errors` re-runs only the failed ones; numbers marked "preliminary" on the `/eval` page come from that partial run, before the claim check existed.
+- Image-model RAM figures are peak usage while embedding in batches of 32; embedding one image at a time needs less.
+
 ## Model choice and the free tier
 
 The live demo has to run on the Gemini free tier. Measured limits for this project's key: Gemini 3.5 Flash allows 20 requests per day (one eval run needs about 120), Gemini 2.5 Flash 5 per minute. The Flash-Lite models allow much more, so the comparison is between Gemini 3.1 Flash-Lite and 3.5 Flash-Lite, and the judge is 3.5 Flash-Lite. A Gemini model judging Gemini answers (including its own) is a known bias; it is why code checks, not the judge, decide pass or fail.
