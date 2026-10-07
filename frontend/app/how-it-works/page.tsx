@@ -162,6 +162,31 @@ export default function HowItWorks() {
           OpenTelemetry), answer caching for repeated questions, and running the eval in CI on every prompt change.
         </Box>
       </section>
+
+      <section className="mt-16 border-t border-ink pt-10">
+        <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-ink-3">Listing Studio</p>
+        <h2 className="mt-2 font-display text-3xl tracking-tight">Photo → facts → copy → check → repair</h2>
+        <div className="mt-6 grid gap-3 md:grid-cols-4">
+          <Box title="1 · Read the photo" tone="clay">
+            One vision call with a Pydantic schema: category (same 12 as the store), type, colours, materials, style,
+            visible features, photo problems. The image is re-encoded to a 768 px JPEG first, which also rejects files
+            that are not images.
+          </Box>
+          <Box title="2 · Write from facts">
+            A second call writes the listing and three ads using only those facts and the seller&apos;s notes. A photo
+            cannot show assembly, durability, comfort or origin, so the prompt keeps those out.
+          </Box>
+          <Box title="3 · Check, repair" tone="olive">
+            Code checks platform limits, risky ad claims and numbers that came from nowhere. Violations go back to the
+            model, at most twice. A draft that still fails is marked for a person.
+          </Box>
+          <Box title="4 · Look-alikes">
+            The photo&apos;s description becomes a query for the store&apos;s hybrid search. No image model on the
+            server: the free host has 512 MB of RAM and the app already uses most of it. Image embeddings were
+            measured offline instead; see the eval report.
+          </Box>
+        </div>
+      </section>
     </main>
   );
 }

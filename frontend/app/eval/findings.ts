@@ -23,3 +23,5 @@ export const FINDINGS: { title: string; body: string }[] = [
     body: "Hybrid search puts the target product in the top 5 for 80 of 80 queries (dense 98%, BM25 99%). The generated queries often reuse catalog words, which flatters keyword search; paraphrases, typos and Vietnamese queries would be a harder and more useful test.",
   },
 ];
+
+export const STUDIO_FINDINGS: { title: string; body: string }[] = [];

@@ -3,6 +3,7 @@ import summaryData from "@/data/eval-summary.json";
 import { CaseExplorer } from "@/components/CaseExplorer";
 import { CHECK_LABELS, MODEL_LABELS, pct, type RunSummary } from "@/lib/eval";
 import { FINDINGS, LIVE_CONFIG } from "./findings";
+import { StudioSection } from "./StudioSection";
 
 export const metadata: Metadata = { title: "Eval report — Kestrel Home assistant" };
 
@@ -157,6 +158,8 @@ export default function EvalPage() {
         </p>
         <CaseExplorer runs={runs.map((r) => ({ id: r.run_id, label: label(r) }))} checkLabels={CHECK_LABELS} />
       </section>
+
+      <StudioSection />
     </main>
   );
 }

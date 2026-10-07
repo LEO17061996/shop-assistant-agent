@@ -3,7 +3,7 @@ import json
 import pytest
 from fastapi.testclient import TestClient
 
-from app import main
+from app import limits, main
 from app.agent.graph import build_graph
 from tests.conftest import ScriptedModel, answer, tool_call
 
@@ -18,7 +18,7 @@ def api(monkeypatch):
     )
     graph = build_graph(model, "system", max_steps=6, history_budget=6000)
     monkeypatch.setattr(main, "get_graph", lambda *a, **k: graph)
-    main._hits.clear()
+    limits._hits.clear()
     with TestClient(main.app) as c:
         yield c
 

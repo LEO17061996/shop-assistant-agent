@@ -43,13 +43,18 @@ export async function* streamChat(history: HistoryItem[], signal?: AbortSignal):
     body: JSON.stringify({ messages: history }),
     signal,
   });
+  yield* readSse<ChatEvent>(res);
+}
+
+/** Parse an SSE response body into {event, data} objects; HTTP errors become one "error" event. */
+export async function* readSse<T>(res: Response): AsyncGenerator<T> {
   if (!res.ok || !res.body) {
     const detail = await res.json().catch(() => null);
     const message =
       res.status === 429
-        ? "Too many messages. Please wait a minute."
+        ? "Too many requests. Please wait a minute."
         : (detail?.detail as string) ?? `Request failed (${res.status})`;
-    yield { event: "error", data: { message: typeof message === "string" ? message : "Invalid request" } };
+    yield { event: "error", data: { message: typeof message === "string" ? message : "Invalid request" } } as T;
     return;
   }
 
@@ -69,7 +74,7 @@ export async function* streamChat(history: HistoryItem[], signal?: AbortSignal):
         if (line.startsWith("event:")) event = line.slice(6).trim();
         else if (line.startsWith("data:")) data += line.slice(5).trimStart();
       }
-      if (data) yield { event, data: JSON.parse(data) } as ChatEvent;
+      if (data) yield { event, data: JSON.parse(data) } as T;
     }
   }
 }

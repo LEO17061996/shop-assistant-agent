@@ -14,6 +14,7 @@ from app.config import get_settings
 PRICES = {
     "gemini-3.1-flash-lite": (0.25, 1.50),
     "gemini-3.5-flash-lite": (0.30, 2.50),
+    "gemini-2.5-flash-lite": (0.10, 0.40),
     "gemini-2.5-flash": (0.30, 2.50),
     "gemini-3.5-flash": (1.50, 9.00),
     "claude-haiku-4-5-20251001": (1.00, 5.00),

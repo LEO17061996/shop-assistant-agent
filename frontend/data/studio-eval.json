@@ -1,0 +1,2610 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "judge": "gemini-3.5-flash-lite",
+ "n": 40,
+ "errors": 17,
+ "category_accuracy": 0.87,
+ "colour_accuracy": 0.824,
+ "colour_n": 17,
+ "material_accuracy": 0.846,
+ "material_n": 13,
+ "first_draft_pass": 0.913,
+ "final_pass": 1.0,
+ "repairs_avg": 0.09,
+ "first_draft_violations_by_rule": {
+  "unique": 1,
+  "max_length": 2
+ },
+ "no_unsupported_claims": 0.565,
+ "unsupported_claims_avg": 0.65,
+ "visual_hit@1": 0.261,
+ "visual_hit@5": 0.565,
+ "visual_mrr": 0.388,
+ "calls_avg": 3.09,
+ "cost_usd_avg": 0.00194,
+ "latency_ms_median": 59388,
+ "cases": [
+  {
+   "id": "B0764TFM7L",
+   "name": "AmazonBasics Faux Linen Upholstered Tufted Headboard - Queen, Beige",
+   "category": "Beds & Headboards",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/0f/0f1f12f8.jpg",
+   "truth": {
+    "color": "Beige",
+    "material": "polyester faux-linen upholstery"
+   },
+   "facts": {
+    "category": "Beds & Headboards",
+    "product_type": "tufted headboard",
+    "colors": [
+     "beige",
+     "black"
+    ],
+    "materials": [
+     "fabric",
+     "metal"
+    ],
+    "style": "contemporary",
+    "features": [
+     "button tufting",
+     "rectangular shape",
+     "two vertical metal legs",
+     "upholstered"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": true,
+   "material_ok": true,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Tufted Headboard Upholstered Rectangular Fabric Bed Headboard",
+     "description": "Upgrade your bedroom with this contemporary tufted headboard. Designed with a clean rectangular shape, this piece features classic button tufting that adds texture and depth to your sleeping space. It is upholstered in high-quality fabric, available in neutral beige or sleek black options to coordinate with your existing furniture. The headboard is supported by two vertical metal legs, providing a sturdy base for your setup. This headboard offers a sophisticated look suitable for a variety of modern interiors. Whether you are looking to refresh your current bedroom design or starting fresh in a new home, this upholstered headboard provides a polished aesthetic. Each piece is crafted with attention to detail to ensure a consistent appearance. The headboard is priced at 738.99 USD. Enhance the visual appeal of your bedroom today with this refined, minimalist furniture addition.",
+     "tags": [
+      "tufted headboard",
+      "upholstered bed",
+      "fabric headboard",
+      "contemporary bed",
+      "bedroom furniture",
+      "beige headboard",
+      "black headboard",
+      "button tufted",
+      "rectangular bed",
+      "metal leg bed",
+      "modern headboard",
+      "bed frame decor",
+      "home furniture"
+     ],
+     "seo_title": "Contemporary Tufted Fabric Headboard | Beige or Black",
+     "seo_description": "Shop our contemporary tufted headboard available in beige or black fabric. Features a rectangular shape and metal legs. Order yours for 738.99 USD."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Transform your bedroom look with our contemporary tufted headboard. Available in beige or black fabric options.",
+      "headline": "Upgrade Your Bed Aesthetic",
+      "description": "Modern tufted design"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Bring a clean, contemporary touch to your room with this rectangular, button-tufted upholstered headboard.",
+      "headline": "Sophisticated Bedroom Style",
+      "description": "Fabric and metal finish"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Looking for a refined update? This rectangular fabric headboard features simple metal legs for easy integration.",
+      "headline": "Refresh Your Bedroom Decor",
+      "description": "Button tufted headboard"
+     }
+    ]
+   },
+   "unsupported_claims": [
+    "crafted with attention to detail to ensure a consistent appearance"
+   ],
+   "alt_facts": {
+    "category": "Beds & Headboards",
+    "product_type": "tufted upholstered headboard",
+    "colors": [
+     "beige",
+     "cream"
+    ],
+    "materials": [
+     "fabric"
+    ],
+    "style": "modern",
+    "features": [
+     "square tufting",
+     "stitched grid pattern",
+     "padded surface"
+    ],
+    "photo_issues": [
+     "cropped"
+    ]
+   },
+   "similar_rank": 1,
+   "calls": 3,
+   "input_tokens": 2964,
+   "output_tokens": 793,
+   "cost_usd": 0.00193,
+   "latency_ms": 78260
+  },
+  {
+   "id": "B07TTHGW2H",
+   "name": "Amazon Brand – Rivet Julie Mid-Century Modern Faux Leather Slope Accent Kitchen Dining Room Chair, 34\"H, Brown",
+   "category": "Chairs",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/1f/1f360ef4.jpg",
+   "truth": {
+    "color": "Brown",
+    "material": null
+   },
+   "facts": {
+    "category": "Chairs",
+    "product_type": "accent chair",
+    "colors": [
+     "grey",
+     "brown"
+    ],
+    "materials": [
+     "leather",
+     "wood"
+    ],
+    "style": "mid-century modern",
+    "features": [
+     "tapered wooden legs",
+     "curved backrest",
+     "integrated armrests",
+     "padded seat"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": true,
+   "material_ok": null,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Mid-Century Modern Accent Chair with Leather Seat and Wooden Legs",
+     "description": "Elevate your living space with this mid-century modern accent chair. This piece features a sophisticated combination of grey and brown leather upholstery paired with a sturdy wooden frame. The design highlights classic aesthetic elements including tapered wooden legs that provide a stable foundation. The chair includes a distinct curved backrest designed for form and integrated armrests for a cohesive look. A padded seat adds a functional layer to the seating experience. The neutral color palette allows this chair to integrate easily into various interior design themes, from professional home offices to cozy reading nooks. Whether placed as a standalone piece in a hallway or paired with other furniture in a living room, this accent chair offers a clean profile and reliable construction. Experience the blend of traditional material use and iconic mid-century modern styling in your home today. Priced at 346.99 USD, this chair is a practical addition to your home furniture collection.",
+     "tags": [
+      "accent chair",
+      "leather chair",
+      "mid-century modern",
+      "wooden legs",
+      "living room chair",
+      "grey leather",
+      "brown leather",
+      "modern furniture",
+      "curved backrest",
+      "padded seat",
+      "home decor",
+      "armchair",
+      "wood frame"
+     ],
+     "seo_title": "Mid-Century Modern Leather Accent Chair | Wood and Leather Chair",
+     "seo_description": "Enhance your home with this mid-century modern accent chair, featuring grey or brown leather, tapered wooden legs, and an integrated armrest design."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Upgrade your interior with this mid-century modern accent chair featuring premium leather and tapered wooden legs.",
+      "headline": "Upgrade Your Home Decor",
+      "description": "Stylish leather seating"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Bring iconic mid-century modern style home. Features leather upholstery, curved backrest, and elegant wooden legs.",
+      "headline": "Timeless Mid-Century Design",
+      "description": "Classic modern aesthetic"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need a versatile seating solution? This accent chair features a padded seat and wood frame for any room in your home.",
+      "headline": "Versatile Accent Seating",
+      "description": "Perfect for any space"
+     }
+    ]
+   },
+   "unsupported_claims": [
+    "grey or brown leather"
+   ],
+   "alt_facts": {
+    "category": "Tables",
+    "product_type": "dining table",
+    "colors": [
+     "brown"
+    ],
+    "materials": [
+     "wood"
+    ],
+    "style": "mid-century modern",
+    "features": [
+     "rectangular tabletop",
+     "tapered wooden legs",
+     "angled leg design"
+    ],
+    "photo_issues": [
+     "lifestyle scene",
+     "several products"
+    ]
+   },
+   "similar_rank": null,
+   "calls": 3,
+   "input_tokens": 2997,
+   "output_tokens": 772,
+   "cost_usd": 0.001907,
+   "latency_ms": 112765
+  },
+  {
+   "id": "B07374P5NP",
+   "name": "Amazon Brand – Rivet Eclipse Mid Century Modern 5-Globe Hanging Ceiling Pendant Chandelier Fixture - 20 x 20 x 48 Inches, Black Metal With Frosted Glass Globes",
+   "category": "Lighting",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/67/670c21b4.jpg",
+   "truth": {
+    "color": "Black",
+    "material": "Metal+Glass"
+   },
+   "facts": {
+    "category": "Lighting",
+    "product_type": "pendant light cluster",
+    "colors": [
+     "white",
+     "black"
+    ],
+    "materials": [
+     "glass",
+     "metal"
+    ],
+    "style": "modern",
+    "features": [
+     "five globe shades",
+     "frosted glass",
+     "adjustable hanging cords",
+     "cascading arrangement"
+    ],
+    "photo_issues": [
+     "several products"
+    ]
+   },
+   "category_ok": true,
+   "colour_ok": true,
+   "material_ok": true,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Modern Pendant Light Cluster, Five Globe Shades, Frosted Glass and Metal",
+     "description": "This modern pendant light cluster features five globe shades arranged in a cascading pattern. The design combines frosted glass globes with a metal frame, available in white or black color options. Each unit includes adjustable hanging cords, allowing you to customize the height of each shade to suit your space. This fixture provides a contemporary lighting solution suitable for various rooms in the home. The clean lines and mix of materials create a simple aesthetic, focusing on the visual impact of the glass globes and their arrangement. Whether you prefer the monochrome look of white or the contrast of black, this pendant light offers a functional and stylish lighting option. Please note that this purchase is for one pendant light cluster set. Installation is required to integrate this fixture into your ceiling electrical setup. This lighting piece is priced at 35.99 USD.",
+     "tags": [
+      "pendant light",
+      "modern lighting",
+      "globe pendant",
+      "glass light",
+      "ceiling light",
+      "cluster light",
+      "frosted glass",
+      "metal fixture",
+      "adjustable light",
+      "modern decor",
+      "cascading light",
+      "home lighting",
+      "five light"
+     ],
+     "seo_title": "Modern Pendant Light Cluster with Five Frosted Glass Globe Shades",
+     "seo_description": "Upgrade your home with this modern pendant light cluster. Features five frosted glass globe shades, metal construction, and adjustable hanging cords."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Customize your lighting height with this pendant light cluster featuring five adjustable globe shades.",
+      "headline": "Adjustable Modern Pendant Lighting",
+      "description": "Five frosted globe shades"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Add a modern touch to your home with this cascading pendant light cluster in white or black metal and frosted glass.",
+      "headline": "Modern Globe Pendant Light",
+      "description": "Available in white or black"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need a statement lighting fixture? This five-globe pendant light cluster offers a sleek modern design for your ceiling.",
+      "headline": "Modern Ceiling Lighting Solution",
+      "description": "Frosted glass and metal"
+     }
+    ]
+   },
+   "unsupported_claims": [],
+   "alt_facts": {
+    "category": "Lighting",
+    "product_type": "globe pendant light",
+    "colors": [
+     "white",
+     "black"
+    ],
+    "materials": [
+     "glass",
+     "metal"
+    ],
+    "style": "modern",
+    "features": [
+     "multi-light fixture",
+     "frosted glass globes",
+     "adjustable cord length",
+     "cluster design"
+    ],
+    "photo_issues": [
+     "lifestyle scene",
+     "several products"
+    ]
+   },
+   "similar_rank": 1,
+   "calls": 3,
+   "input_tokens": 2974,
+   "output_tokens": 736,
+   "cost_usd": 0.001847,
+   "latency_ms": 59388
+  },
+  {
+   "id": "B07RRR2XT2",
+   "name": "Amazon Basics Rectangular Wall Mirror - 20\" x 28\", Peaked Trim, Nickel",
+   "category": "Mirrors",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/d1/d132b12e.jpg",
+   "truth": {
+    "color": "Nickel",
+    "material": null
+   },
+   "facts": {
+    "category": "Mirrors",
+    "product_type": "rectangular wall mirror",
+    "colors": [
+     "grey",
+     "silver"
+    ],
+    "materials": [
+     "metal",
+     "glass"
+    ],
+    "style": "modern",
+    "features": [
+     "beveled frame",
+     "rectangular shape",
+     "minimalist design"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": true,
+   "material_ok": null,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Rectangular Wall Mirror Modern Silver Grey Metal Beveled Frame",
+     "description": "Enhance your living space with this modern rectangular wall mirror. The piece features a sleek silver and grey metal frame that provides a clean, contemporary aesthetic. Constructed with high-quality glass, the mirror includes a sophisticated beveled frame design that adds depth and texture to the surface. Its minimalist design makes it a versatile choice for various rooms, blending seamlessly into your existing decor. Whether placed in a hallway, bedroom, or living area, this rectangular wall mirror serves as a functional and stylish accent. The frame is crafted from durable metal, ensuring a polished finish that complements the reflective glass. This mirror is designed for easy wall mounting, providing a balanced and symmetrical look for any interior wall. Simple and elegant, it reflects light effectively to brighten your home while maintaining a refined, modern appearance.",
+     "tags": [
+      "rectangular mirror",
+      "wall mirror",
+      "modern mirror",
+      "metal frame",
+      "silver mirror",
+      "grey mirror",
+      "beveled mirror",
+      "minimalist decor",
+      "home accents",
+      "modern wall decor",
+      "glass mirror",
+      "contemporary mirror",
+      "rectangular wall"
+     ],
+     "seo_title": "Modern Rectangular Wall Mirror in Silver and Grey Metal",
+     "seo_description": "Upgrade your home with this modern rectangular wall mirror. Features a silver and grey beveled metal frame for a minimalist look. Price $155.99."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Brighten your room with our modern rectangular wall mirror. Features a sleek beveled metal frame for a polished look.",
+      "headline": "Modern Reflective Style",
+      "description": "Elegant wall accent"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Discover our new rectangular wall mirror. The silver and grey beveled metal frame offers a refined, minimalist aesthetic.",
+      "headline": "Sleek Modern Design",
+      "description": "Minimalist silver finish"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need a stylish wall accent for your room? This rectangular mirror features a minimalist frame to enhance your space.",
+      "headline": "Upgrade Your Wall Decor",
+      "description": "Sleek beveled frame"
+     }
+    ]
+   },
+   "unsupported_claims": [
+    "constructed with high-quality glass",
+    "designed for easy wall mounting"
+   ],
+   "alt_facts": {
+    "category": "Other",
+    "product_type": "serving tray",
+    "colors": [
+     "silver",
+     "white"
+    ],
+    "materials": [
+     "metal"
+    ],
+    "style": "minimalist",
+    "features": [
+     "rectangular shape",
+     "raised edges",
+     "metallic finish",
+     "small feet"
+    ],
+    "photo_issues": [
+     "cropped"
+    ]
+   },
+   "similar_rank": null,
+   "calls": 3,
+   "input_tokens": 2958,
+   "output_tokens": 741,
+   "cost_usd": 0.001851,
+   "latency_ms": 131673
+  },
+  {
+   "id": "B073GBFBWJ",
+   "name": "Amazon Brand – Rivet Six-Sided Modern Ottoman, 19\"W, Midnight",
+   "category": "Ottomans & Stools",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/2e/2ece4100.jpg",
+   "truth": {
+    "color": "Midnight",
+    "material": null
+   },
+   "facts": {
+    "category": "Ottomans & Stools",
+    "product_type": "hexagonal ottoman",
+    "colors": [
+     "navy blue"
+    ],
+    "materials": [
+     "fabric"
+    ],
+    "style": "contemporary",
+    "features": [
+     "hexagonal shape",
+     "piped edge",
+     "upholstered"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": null,
+   "material_ok": null,
+   "violations_by_round": [
+    [
+     {
+      "field": "listing.tags",
+      "rule": "unique",
+      "detail": "duplicate tags"
+     }
+    ],
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Hexagonal Ottoman in Navy Blue Fabric, Contemporary Upholstered Footstool",
+     "description": "Add a modern touch to your living space with this contemporary hexagonal ottoman. Featuring a geometric six-sided design, this piece offers a clean look that fits well with various decor styles. It is fully upholstered in navy blue fabric that provides a consistent texture and deep color tone. The design includes a piped edge detail along the seams, which adds a subtle structural outline to the overall silhouette of the item. This ottoman serves as a functional addition to any room, functioning as an extra seat, a footrest, or a decorative accent piece. The navy blue fabric ensures it blends easily into existing color schemes while providing a distinct shape to break up traditional furniture arrangements. At a price of 250.99 USD, this piece maintains its hexagonal form. Enhance your home with this simple yet functional contemporary furnishing piece.",
+     "tags": [
+      "navy blue ottoman",
+      "hexagonal ottoman",
+      "fabric footstool",
+      "contemporary stool",
+      "upholstered seat",
+      "modern footrest",
+      "blue home decor",
+      "geometric ottoman",
+      "living room stool",
+      "piped edge stool",
+      "navy blue decor",
+      "accent ottoman",
+      "navy fabric seat"
+     ],
+     "seo_title": "Contemporary Hexagonal Ottoman in Navy Blue Fabric",
+     "seo_description": "Upgrade your home with this contemporary navy blue hexagonal ottoman. Featuring fabric upholstery and elegant piped edge detailing."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Complete your living room layout with our navy blue hexagonal ottoman. Stylish, versatile, and finished in fabric.",
+      "headline": "Upgrade Your Space",
+      "description": "Navy Blue Hexagonal Ottoman"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Featuring a sharp hexagonal shape and piped edges, this navy blue ottoman adds a contemporary look to any room.",
+      "headline": "Modern Contemporary Design",
+      "description": "Upholstered Fabric Ottoman"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need a versatile seating or footrest solution? This navy blue hexagonal ottoman offers a clean, geometric silhouette.",
+      "headline": "Versatile Living Room Seating",
+      "description": "Stylish Geometric Ottoman"
+     }
+    ]
+   },
+   "unsupported_claims": [],
+   "alt_facts": {
+    "category": "Other",
+    "product_type": "fabric swatch",
+    "colors": [
+     "navy blue",
+     "black"
+    ],
+    "materials": [
+     "fabric"
+    ],
+    "style": "minimalist",
+    "features": [
+     "solid color",
+     "woven texture"
+    ],
+    "photo_issues": []
+   },
+   "similar_rank": null,
+   "calls": 4,
+   "input_tokens": 3841,
+   "output_tokens": 1240,
+   "cost_usd": 0.00282,
+   "latency_ms": 47751
+  },
+  {
+   "id": "B07C8WYFPM",
+   "name": "Amazon Brand – Rivet Glam Soft Faux Fur Throw Pillow - 20 x 20 Inch, Grey",
+   "category": "Pillows & Throws",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/b6/b66aad79.jpg",
+   "truth": {
+    "color": "Grey",
+    "material": null
+   },
+   "facts": {
+    "category": "Pillows & Throws",
+    "product_type": "throw pillow",
+    "colors": [
+     "grey"
+    ],
+    "materials": [
+     "faux fur"
+    ],
+    "style": "modern",
+    "features": [
+     "square shape",
+     "textured surface"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": true,
+   "material_ok": null,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Grey Faux Fur Throw Pillow Square Modern Textured Accent Cushion",
+     "description": "Refresh your living space with this modern square throw pillow. Featuring a sophisticated grey faux fur finish, this accent piece adds a refined and textured surface to any sofa or chair. The neutral color tone is designed to complement a wide range of interior decor styles, providing a cohesive look in your home. This pillow offers a clean and minimalist aesthetic that elevates your seating area without overwhelming your existing furniture. Whether placed individually or styled as a group, the faux fur texture creates visual interest and tactile appeal for your living room, bedroom, or lounge area. Enhance your decor with this contemporary square pillow today. This item is priced at 22.99 USD. It is a versatile choice for homeowners looking to update their interior layout with a functional and stylish home furnishing accessory.",
+     "tags": [
+      "grey throw pillow",
+      "faux fur pillow",
+      "square pillow",
+      "modern decor",
+      "textured cushion",
+      "accent pillow",
+      "grey cushion",
+      "home furnishing",
+      "modern throw",
+      "living room decor",
+      "decorative pillow",
+      "furry pillow",
+      "square cushion"
+     ],
+     "seo_title": "Grey Faux Fur Square Throw Pillow | Modern Textured Accent Cushion",
+     "seo_description": "Upgrade your home with this modern square grey faux fur throw pillow. A textured accent piece perfect for any sofa or chair at 22.99 USD."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Update your living space with our grey faux fur square pillow. Adds texture and style to your home for 22.99 USD.",
+      "headline": "Upgrade Your Home Decor",
+      "description": "Modern Grey Throw Pillow"
+     },
+     {
+      "angle": "style",
+      "primary_text": "This modern square throw pillow in grey faux fur brings a clean, textured look to your living room or bedroom.",
+      "headline": "Modern Textured Design",
+      "description": "Elegant Faux Fur Finish"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need a simple way to refresh your room? This square grey faux fur pillow adds instant texture to any seating area.",
+      "headline": "Refresh Your Space",
+      "description": "Modern Square Cushion"
+     }
+    ]
+   },
+   "unsupported_claims": [],
+   "alt_facts": {
+    "category": "Pillows & Throws",
+    "product_type": "faux fur throw pillow",
+    "colors": [
+     "grey"
+    ],
+    "materials": [
+     "faux fur"
+    ],
+    "style": "modern",
+    "features": [
+     "plush texture",
+     "soft appearance",
+     "square shape"
+    ],
+    "photo_issues": [
+     "cropped"
+    ]
+   },
+   "similar_rank": 1,
+   "calls": 3,
+   "input_tokens": 2943,
+   "output_tokens": 701,
+   "cost_usd": 0.001787,
+   "latency_ms": 17616
+  },
+  {
+   "id": "B07ZVM6QMT",
+   "name": "AmazonBasics Recycled Wood Square Garden Planter - 17.75\" x 17.75\"",
+   "category": "Planters",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/45/454d252b.jpg",
+   "truth": {
+    "color": "Black",
+    "material": "Wood"
+   },
+   "facts": {
+    "category": "Planters",
+    "product_type": "square wooden planter",
+    "colors": [
+     "brown",
+     "black"
+    ],
+    "materials": [
+     "wood",
+     "metal",
+     "plastic"
+    ],
+    "style": "industrial",
+    "features": [
+     "square shape",
+     "metal corner brackets",
+     "internal plastic liner",
+     "short feet"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": true,
+   "material_ok": true,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Square Wooden Planter Industrial Style with Metal Corner Brackets",
+     "description": "Enhance your indoor or outdoor space with this industrial style square wooden planter. Featuring a sturdy wooden frame, this planter is accented with distinctive metal corner brackets that add to its functional aesthetic. The design includes short feet to elevate the structure slightly off the ground. Each unit comes with an internal plastic liner to help manage soil and water containment. The planter is available in both brown and black finishes to suit your decor needs. With its clean lines and geometric shape, this square wooden planter provides a practical solution for displaying your favorite plants. Please note that this product is priced at 102.99 USD.",
+     "tags": [
+      "square planter",
+      "wooden planter",
+      "industrial decor",
+      "metal accents",
+      "indoor planter",
+      "outdoor planter",
+      "plant container",
+      "home decor",
+      "black planter",
+      "brown planter",
+      "garden decor",
+      "planter box",
+      "modern garden"
+     ],
+     "seo_title": "Industrial Square Wooden Planter with Metal Brackets",
+     "seo_description": "Shop our industrial style square wooden planter. Features metal corner brackets, internal plastic liner, and short feet. Available in brown and black."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Keep your plants organized with our industrial square wooden planter, featuring an included internal plastic liner.",
+      "headline": "Industrial Square Wood Planter",
+      "description": "Features internal liner"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Achieve a sharp industrial aesthetic with this wooden planter featuring metal corner brackets and short feet.",
+      "headline": "Upgrade Your Space",
+      "description": "Industrial style design"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Struggling to find the right container? This square planter includes an internal plastic liner for easy planting.",
+      "headline": "Easy Planting Solution",
+      "description": "Includes plastic liner"
+     }
+    ]
+   },
+   "unsupported_claims": [
+    "Enhance your indoor or outdoor space",
+    "indoor planter",
+    "outdoor planter"
+   ],
+   "alt_facts": {
+    "category": "Planters",
+    "product_type": "square planter",
+    "colors": [
+     "brown",
+     "black"
+    ],
+    "materials": [
+     "wood",
+     "metal"
+    ],
+    "style": "industrial",
+    "features": [
+     "square shape",
+     "metal corner frames",
+     "wooden panels",
+     "raised design"
+    ],
+    "photo_issues": [
+     "lifestyle scene"
+    ]
+   },
+   "similar_rank": 1,
+   "calls": 3,
+   "input_tokens": 2969,
+   "output_tokens": 661,
+   "cost_usd": 0.001734,
+   "latency_ms": 16428
+  },
+  {
+   "id": "B07TZMWH9C",
+   "name": "Amazon Basics - 8'X10' Plush Diamond Trellis Shag Rug, Grey",
+   "category": "Rugs",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/10/1068c70b.jpg",
+   "truth": {
+    "color": "Grey/White",
+    "material": "Polypropylene"
+   },
+   "facts": {
+    "category": "Sofas",
+    "product_type": "sectional sofa",
+    "colors": [
+     "brown"
+    ],
+    "materials": [
+     "leather"
+    ],
+    "style": "contemporary",
+    "features": [
+     "chaise lounge",
+     "square arms",
+     "cushioned back",
+     "three seat cushions"
+    ],
+    "photo_issues": [
+     "lifestyle scene",
+     "several products"
+    ]
+   },
+   "category_ok": false,
+   "colour_ok": false,
+   "material_ok": false,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Sectional Sofa Brown Leather with Chaise Lounge and Square Arms",
+     "description": "Upgrade your living room with this contemporary sectional sofa. This brown leather piece features a chaise lounge and a cushioned back design. It includes three seat cushions and is framed by distinct square arms. The set provides a structured look for any seating area, combining a modern style with functional design elements. This sofa is available for 609.99 dollars and serves as a primary seating solution for your home. Its leather finish offers a smooth aesthetic, while the square arms provide a clean, modern silhouette. Designed for placement in various room layouts, this sectional sofa is a versatile addition to your furniture collection.",
+     "tags": [
+      "sectional sofa",
+      "leather sofa",
+      "brown sofa",
+      "chaise lounge",
+      "contemporary sofa",
+      "living room sofa",
+      "square arm sofa",
+      "leather furniture",
+      "modern sofa",
+      "brown sectional",
+      "three seat sofa",
+      "cushioned back",
+      "home furniture"
+     ],
+     "seo_title": "Brown Leather Sectional Sofa with Chaise Lounge",
+     "seo_description": "Shop this contemporary brown leather sectional sofa featuring a chaise lounge, square arms, and three seat cushions for 609.99 dollars."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Enhance your home with this contemporary brown leather sectional sofa, featuring a chaise lounge and three seat cushions.",
+      "headline": "Brown Leather Sectional Sofa",
+      "description": "Modern contemporary style."
+     },
+     {
+      "angle": "style",
+      "primary_text": "Clean square arms and a modern design define this brown leather sectional sofa, complete with a chaise lounge.",
+      "headline": "Contemporary Leather Sofa",
+      "description": "Stylish brown finish."
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need a flexible seating arrangement? This brown leather sectional includes a chaise lounge and three seat cushions.",
+      "headline": "Versatile Sectional Sofa",
+      "description": "Features a chaise lounge."
+     }
+    ]
+   },
+   "unsupported_claims": [],
+   "alt_facts": {
+    "category": "Rugs",
+    "product_type": "shag rug",
+    "colors": [
+     "grey",
+     "white"
+    ],
+    "materials": [
+     "synthetic fiber"
+    ],
+    "style": "bohemian",
+    "features": [
+     "shag texture",
+     "trellis pattern",
+     "rectangular"
+    ],
+    "photo_issues": [
+     "dimension diagram"
+    ]
+   },
+   "similar_rank": 2,
+   "calls": 3,
+   "input_tokens": 2969,
+   "output_tokens": 707,
+   "cost_usd": 0.001803,
+   "latency_ms": 24724
+  },
+  {
+   "id": "B07L9BVBCJ",
+   "name": "AmazonBasics 2-Tier Stackable Storage Shelf",
+   "category": "Shelves & Storage",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/92/92a0ade2.jpg",
+   "truth": {
+    "color": null,
+    "material": "Engineered Wood"
+   },
+   "facts": {
+    "category": "Shelves & Storage",
+    "product_type": "two-tier wire shelf",
+    "colors": [
+     "black"
+    ],
+    "materials": [
+     "metal"
+    ],
+    "style": "industrial",
+    "features": [
+     "solid top shelf",
+     "wire mesh bottom shelf",
+     "four vertical support posts"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": null,
+   "material_ok": false,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Industrial Two-Tier Wire Shelf in Black Metal",
+     "description": "Organize your space with this industrial style two-tier shelf. Finished in a matte black, this unit features a solid top shelf for versatile display options and a wire mesh bottom shelf that allows for airflow and visibility. The structural design is defined by four vertical support posts that provide a clean, geometric silhouette suitable for various home or office storage needs. Crafted from durable metal, this storage solution balances open-air aesthetics with practical shelving space. Whether you are looking to declutter your desk or display decorative items, this versatile piece fits seamlessly into modern, minimalist, or industrial interiors. The combination of solid and mesh surfaces offers a unique contrast, while the open frame prevents the furniture from feeling bulky in smaller rooms. This unit arrives ready to be a functional part of your home storage setup.",
+     "tags": [
+      "wire shelf",
+      "industrial shelf",
+      "black metal shelf",
+      "two tier shelf",
+      "storage shelf",
+      "metal storage",
+      "home storage",
+      "office storage",
+      "open shelving",
+      "display shelf",
+      "modern storage",
+      "industrial decor",
+      "black shelf"
+     ],
+     "seo_title": "Industrial Two-Tier Metal Wire Shelf in Black",
+     "seo_description": "Upgrade your storage with our industrial two-tier wire shelf. Features a solid top shelf, wire mesh bottom, and black metal frame."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Maximize your storage with this versatile two-tier shelf featuring a solid top and wire mesh bottom.",
+      "headline": "Functional Two-Tier Storage",
+      "description": "Modern Industrial Style"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Elevate your room with this industrial-inspired black metal shelf. A perfect addition to any space.",
+      "headline": "Industrial Design Accent",
+      "description": "Matte Black Metal Finish"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Struggling with clutter? This two-tier metal unit provides organized storage for any room in your home.",
+      "headline": "Simple Storage Solution",
+      "description": "Two Levels of Storage"
+     }
+    ]
+   },
+   "unsupported_claims": [
+    "Finished in a matte black"
+   ],
+   "alt_facts": {
+    "category": "Shelves & Storage",
+    "product_type": "wire storage shelf",
+    "colors": [
+     "black"
+    ],
+    "materials": [
+     "metal"
+    ],
+    "style": "industrial",
+    "features": [
+     "two tiers",
+     "open wire construction",
+     "rectangular shape",
+     "four vertical posts"
+    ],
+    "photo_issues": []
+   },
+   "similar_rank": 3,
+   "calls": 3,
+   "input_tokens": 2955,
+   "output_tokens": 705,
+   "cost_usd": 0.001796,
+   "latency_ms": 95464
+  },
+  {
+   "id": "B082TC37LY",
+   "name": "Amazon Brand – Rivet Canton Deep Mid-Century Modern Loveseat Sofa Couch, 76.7\"W, Dark Grey",
+   "category": "Sofas",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/97/9760b07b.jpg",
+   "truth": {
+    "color": "Dark Grey",
+    "material": "Polyester"
+   },
+   "facts": {
+    "category": "Sofas",
+    "product_type": "sofa",
+    "colors": [
+     "grey"
+    ],
+    "materials": [
+     "fabric",
+     "wood"
+    ],
+    "style": "mid-century modern",
+    "features": [
+     "two seat cushions",
+     "two back cushions",
+     "track arms",
+     "tapered wooden legs"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": true,
+   "material_ok": true,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Mid-Century Modern Sofa Grey Fabric Track Arms Tapered Wooden Legs",
+     "description": "Upgrade your living space with this sophisticated mid-century modern sofa. This piece features a neutral grey fabric upholstery that complements a variety of interior decor styles. Designed with clean lines and functional aesthetics, the sofa includes two plush seat cushions and two matching back cushions for a balanced look. The silhouette is defined by structured track arms, providing a sleek appearance that fits well in both formal living rooms and casual den areas. Adding to its distinct vintage-inspired profile are the tapered wooden legs, which offer a stable foundation and a warm contrast to the grey fabric. Whether you are furnishing a new apartment or refreshing your current home arrangement, this sofa serves as a versatile anchor for your living room. The combination of classic mid-century design elements and modern fabric materials ensures this sofa remains a functional and stylish addition to your residence. This item is priced at 1485.99 USD.",
+     "tags": [
+      "sofa",
+      "grey sofa",
+      "mid-century sofa",
+      "fabric sofa",
+      "modern couch",
+      "living room sofa",
+      "two cushion sofa",
+      "track arm sofa",
+      "wood leg sofa",
+      "mid-century modern",
+      "home furniture",
+      "grey fabric sofa",
+      "tapered leg sofa"
+     ],
+     "seo_title": "Mid-Century Modern Grey Fabric Sofa with Tapered Wooden Legs",
+     "seo_description": "Shop this grey mid-century modern sofa featuring track arms, tapered wooden legs, and two seat cushions. A stylish, versatile choice for any living room."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Enhance your living room with our mid-century modern grey fabric sofa. Features tapered wooden legs and track arms.",
+      "headline": "Upgrade Your Living Space",
+      "description": "Classic Mid-Century Style"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Embrace the mid-century modern aesthetic with our grey fabric sofa, complete with sleek track arms and tapered wood legs.",
+      "headline": "Mid-Century Modern Design",
+      "description": "Elegant Grey Fabric Sofa"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need a versatile seating solution? This grey fabric sofa offers mid-century style with two seat and back cushions.",
+      "headline": "Find Your Perfect Sofa",
+      "description": "Stylish Modern Furniture"
+     }
+    ]
+   },
+   "unsupported_claims": [
+    "plush seat cushions"
+   ],
+   "alt_facts": {
+    "category": "Sofas",
+    "product_type": "sofa",
+    "colors": [
+     "brown",
+     "grey"
+    ],
+    "materials": [
+     "fabric",
+     "wood"
+    ],
+    "style": "mid-century modern",
+    "features": [
+     "tapered wooden legs",
+     "textured fabric upholstery"
+    ],
+    "photo_issues": [
+     "cropped"
+    ]
+   },
+   "similar_rank": 6,
+   "calls": 3,
+   "input_tokens": 2971,
+   "output_tokens": 728,
+   "cost_usd": 0.001835,
+   "latency_ms": 187620
+  },
+  {
+   "id": "B07HSMYNYF",
+   "name": "Stone & Beam Rylee Modern Coffee Table 19.69\"H, Mixed Gray",
+   "category": "Tables",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/5b/5bde5e5c.jpg",
+   "truth": {
+    "color": null,
+    "material": null
+   },
+   "facts": {
+    "category": "Tables",
+    "product_type": "coffee table",
+    "colors": [
+     "light brown"
+    ],
+    "materials": [
+     "wood"
+    ],
+    "style": "modern",
+    "features": [
+     "one drawer",
+     "open shelf",
+     "tapered legs",
+     "rectangular top"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": null,
+   "material_ok": null,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Modern Coffee Table, Light Brown Wood with One Drawer and Open Shelf",
+     "description": "Elevate your living space with this modern coffee table. Crafted from light brown wood, this piece features a sleek rectangular top that provides a functional surface for your daily needs. The design incorporates a single drawer, offering a discreet storage solution for your essentials, alongside an open shelf that allows for easy access to magazines, books, or decorative items.\n\nThe tapered legs add a clean aesthetic to the overall silhouette, ensuring the table complements a variety of contemporary interiors. With its balanced blend of form and utility, this rectangular coffee table serves as a central anchor for your room. The light wood tones bring a warm, natural look to your home, while the organized layout helps keep your living area tidy. This table is designed for those who appreciate functional storage combined with a minimalist modern style.",
+     "tags": [
+      "coffee table",
+      "wood coffee table",
+      "modern furniture",
+      "storage table",
+      "living room decor",
+      "rectangular table",
+      "light brown wood",
+      "drawer table",
+      "open shelf table",
+      "tapered legs",
+      "modern table",
+      "home furniture",
+      "wood table"
+     ],
+     "seo_title": "Modern Coffee Table in Light Brown Wood with Storage",
+     "seo_description": "Enhance your living room with our modern coffee table. Features a light brown wood finish, one storage drawer, an open shelf, and tapered legs."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Keep your living room organized with a coffee table featuring a storage drawer and open shelf for easy access.",
+      "headline": "Functional Modern Coffee Table",
+      "description": "Storage meets modern style."
+     },
+     {
+      "angle": "style",
+      "primary_text": "Bring a clean, modern look to your home with this light brown wood coffee table featuring elegant tapered legs.",
+      "headline": "Modern Wood Coffee Table",
+      "description": "Sleek contemporary design."
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need extra storage? This coffee table includes a drawer and open shelf to help you reduce clutter in your living space.",
+      "headline": "Organize Your Living Area",
+      "description": "Storage solution for you."
+     }
+    ]
+   },
+   "unsupported_claims": [],
+   "alt_facts": {
+    "category": "Tables",
+    "product_type": "coffee table",
+    "colors": [
+     "light brown"
+    ],
+    "materials": [
+     "wood"
+    ],
+    "style": "mid-century modern",
+    "features": [
+     "tapered legs",
+     "one drawer",
+     "open storage shelf"
+    ],
+    "photo_issues": [
+     "lifestyle scene",
+     "several products"
+    ]
+   },
+   "similar_rank": 5,
+   "calls": 3,
+   "input_tokens": 2953,
+   "output_tokens": 715,
+   "cost_usd": 0.001811,
+   "latency_ms": 131351
+  },
+  {
+   "id": "B073P58C2W",
+   "name": "Amazon Brand – Rivet American Forest Map Wall Art Print in White Wood Frame, 30\" x 30\"",
+   "category": "Wall Art",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/f9/f9015c62.jpg",
+   "truth": {
+    "color": "Multi",
+    "material": "wood"
+   },
+   "facts": {
+    "category": "Wall Art",
+    "product_type": "framed wall art",
+    "colors": [
+     "light blue",
+     "white",
+     "green"
+    ],
+    "materials": [
+     "wood",
+     "glass"
+    ],
+    "style": "modern",
+    "features": [
+     "square frame",
+     "white border",
+     "United States map shape",
+     "forest landscape print"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": null,
+   "material_ok": true,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Modern Framed Wall Art United States Map Forest Landscape Print Square",
+     "description": "Elevate your home decor with this modern square framed wall art. The piece features a detailed forest landscape print carefully crafted into the shape of a United States map. Designed with a clean aesthetic, it includes a crisp white border that highlights the colors of light blue, white, and green within the landscape. The artwork is securely housed within a high-quality wood frame and protected by clear glass. This wall art arrives ready to display in your home or office space. The professional framing ensures the print remains protected while adding a sophisticated touch to your wall. Whether placed in a living room, bedroom, or study, this piece offers a unique blend of geography and nature themes. The light blue and green tones create a refreshing look that fits well with a variety of modern interior styles. Each element, from the sturdy frame to the glass covering, provides a polished presentation for your walls.",
+     "tags": [
+      "framed wall art",
+      "us map art",
+      "forest landscape",
+      "modern wall art",
+      "square frame",
+      "nature wall art",
+      "united states map",
+      "wall decor",
+      "home decor",
+      "blue wall art",
+      "wood frame art",
+      "modern decor",
+      "map print"
+     ],
+     "seo_title": "Modern US Map Forest Landscape Framed Wall Art - Square Frame",
+     "seo_description": "Enhance your wall decor with this modern square framed wall art featuring a forest landscape shaped as a United States map with a white border."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Refresh your home with this modern US map forest landscape art, encased in a wood frame with glass protection.",
+      "headline": "Modern Forest Map Wall Art",
+      "description": "Stylish framed decor."
+     },
+     {
+      "angle": "style",
+      "primary_text": "Add a modern touch to your space with our square framed wall art featuring a unique forest landscape US map design.",
+      "headline": "Modern Square Framed Art",
+      "description": "Elegant landscape print."
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Looking for distinct wall decor? This framed US map with a green forest landscape provides a clean, modern focal point.",
+      "headline": "Unique US Map Art Print",
+      "description": "Modern wood framed decor."
+     }
+    ]
+   },
+   "unsupported_claims": [],
+   "alt_facts": {
+    "category": "Wall Art",
+    "product_type": "framed art print",
+    "colors": [
+     "white",
+     "blue",
+     "green"
+    ],
+    "materials": [
+     "glass",
+     "wood"
+    ],
+    "style": "contemporary",
+    "features": [
+     "square frame",
+     "map silhouette",
+     "forest imagery"
+    ],
+    "photo_issues": [
+     "dimension diagram"
+    ]
+   },
+   "similar_rank": 1,
+   "calls": 3,
+   "input_tokens": 2970,
+   "output_tokens": 802,
+   "cost_usd": 0.001945,
+   "latency_ms": 91388
+  },
+  {
+   "id": "B07QFRSDCD",
+   "name": "Stone & Beam Glenwilde Queen Headboard, 75\"W, Indigo",
+   "category": "Beds & Headboards",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/5a/5a753205.jpg",
+   "truth": {
+    "color": "Indigo",
+    "material": null
+   },
+   "facts": {
+    "category": "Beds & Headboards",
+    "product_type": "upholstered headboard",
+    "colors": [
+     "navy blue"
+    ],
+    "materials": [
+     "fabric",
+     "wood"
+    ],
+    "style": "contemporary",
+    "features": [
+     "wingback design",
+     "rectangular silhouette",
+     "straight legs",
+     "tall profile"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": true,
+   "material_ok": null,
+   "violations_by_round": [
+    [
+     {
+      "field": "listing.tags",
+      "rule": "max_length",
+      "detail": "'upholstered headboard' is 21 characters, limit 20"
+     },
+     {
+      "field": "listing.tags",
+      "rule": "max_length",
+      "detail": "'rectangular headboard' is 21 characters, limit 20"
+     }
+    ],
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Upholstered Headboard Navy Blue Wingback Contemporary Fabric Wood",
+     "description": "Upgrade your bedroom with this contemporary upholstered headboard. Featuring a bold navy blue fabric finish, this piece brings a modern aesthetic to any space. The design includes a striking wingback style paired with a classic rectangular silhouette to create a sophisticated focal point for your bed. Built with a sturdy wood frame, this headboard offers a tall profile that stands out as a centerpiece in your room. The straight legs ensure a clean and structured look that complements various interior styles. This headboard is crafted to provide a defined look while maintaining a sleek, contemporary appearance. It is an ideal choice for those looking to refresh their bedroom decor with a simple yet elegant upgrade. Whether you are aiming for a refined look or a cohesive bedroom layout, this navy blue fabric headboard offers a versatile solution for your home at a price of 363.99 USD.",
+     "tags": [
+      "upholstered head",
+      "navy blue bed",
+      "wingback headboard",
+      "contemporary decor",
+      "fabric headboard",
+      "tall headboard",
+      "bedroom furniture",
+      "modern headboard",
+      "wood frame",
+      "bedroom decor",
+      "blue furniture",
+      "rect headboard",
+      "bed headboard"
+     ],
+     "seo_title": "Contemporary Navy Blue Wingback Upholstered Headboard",
+     "seo_description": "Enhance your bedroom with this contemporary navy blue wingback upholstered headboard featuring a tall rectangular silhouette and sturdy wood frame."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Elevate your bedroom decor with this tall navy blue wingback headboard. Modern design meets elegant fabric construction.",
+      "headline": "Modern Navy Blue Headboard",
+      "description": "Available for 363.99 USD"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Discover contemporary elegance with our navy blue upholstered headboard. Featuring a wingback design and tall profile.",
+      "headline": "Contemporary Wingback Style",
+      "description": "Sophisticated navy fabric"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need a bedroom refresh? Our contemporary navy blue wingback headboard provides a polished look with a sleek silhouette.",
+      "headline": "Upgrade Your Bed Frame",
+      "description": "Tall rectangular design"
+     }
+    ]
+   },
+   "unsupported_claims": [],
+   "alt_facts": {
+    "category": "Beds & Headboards",
+    "product_type": "wingback bed frame",
+    "colors": [
+     "navy blue",
+     "white",
+     "grey"
+    ],
+    "materials": [
+     "fabric",
+     "linen"
+    ],
+    "style": "transitional",
+    "features": [
+     "wingback headboard",
+     "upholstered headboard",
+     "bed skirt",
+     "high headboard"
+    ],
+    "photo_issues": [
+     "lifestyle scene"
+    ]
+   },
+   "similar_rank": null,
+   "calls": 4,
+   "input_tokens": 3939,
+   "output_tokens": 1379,
+   "cost_usd": 0.003053,
+   "latency_ms": 37002
+  },
+  {
+   "id": "B071J7Q9X4",
+   "name": "Amazon Brand – Rivet Huxley Mid-Century Accent Chair, Light Grey",
+   "category": "Chairs",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/15/156fedd3.jpg",
+   "truth": {
+    "color": "Light Grey",
+    "material": "Textile"
+   },
+   "facts": {
+    "category": "Chairs",
+    "product_type": "accent chair",
+    "colors": [
+     "light grey",
+     "brown"
+    ],
+    "materials": [
+     "fabric",
+     "wood"
+    ],
+    "style": "mid-century modern",
+    "features": [
+     "upholstered seat and back",
+     "wooden frame",
+     "sloped armrests",
+     "angled legs"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": true,
+   "material_ok": true,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Mid-Century Modern Accent Chair with Wood Frame and Light Grey Fabric",
+     "description": "Enhance your living space with this mid-century modern accent chair. The piece features a sturdy wooden frame combined with an upholstered seat and back for a clean look. The design highlights classic elements including angled legs and sloped armrests which contribute to its distinct silhouette. This accent chair is available in a light grey fabric option, making it a versatile addition to various interior settings. The combination of fabric and wood materials provides a balanced aesthetic suitable for bedrooms, offices, or living rooms. The piece is thoughtfully constructed to maintain the iconic mid-century modern style that complements contemporary decor. Whether placed as a standalone item or paired with other furniture, this chair offers a refined touch to any room in your home. Experience the blend of functional design and classic style with this wooden frame accent chair today.",
+     "tags": [
+      "accent chair",
+      "mid-century modern",
+      "wood chair",
+      "fabric chair",
+      "modern furniture",
+      "living room chair",
+      "upholstered seat",
+      "wooden frame",
+      "sloped arms",
+      "angled legs",
+      "grey chair",
+      "brown chair",
+      "home furniture"
+     ],
+     "seo_title": "Mid-Century Modern Accent Chair with Wood Frame",
+     "seo_description": "Upgrade your home with a mid-century modern accent chair. Features a wooden frame, upholstered seat, and sloped armrests. Available in light grey fabric."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Refresh your home interior with this mid-century modern accent chair. Features a classic wooden frame and fabric upholstery.",
+      "headline": "Modern Accent Chair Design",
+      "description": "Available in Light Grey"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Bring iconic mid-century modern style to your space. This chair pairs a rich wood frame with soft fabric upholstery.",
+      "headline": "Mid-Century Style Seating",
+      "description": "Fabric and Wood Design"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need a versatile seating option? This accent chair provides a mid-century modern look with durable wood and fabric.",
+      "headline": "Upgrade Your Living Space",
+      "description": "Elegant Wood Construction"
+     }
+    ]
+   },
+   "unsupported_claims": [
+    "This chair provides a mid-century modern look with durable wood and fabric."
+   ],
+   "alt_facts": {
+    "category": "Chairs",
+    "product_type": "accent chair",
+    "colors": [
+     "grey",
+     "brown"
+    ],
+    "materials": [
+     "fabric",
+     "wood"
+    ],
+    "style": "mid-century modern",
+    "features": [
+     "open wooden frame",
+     "upholstered seat",
+     "upholstered backrest",
+     "angled legs"
+    ],
+    "photo_issues": [
+     "lifestyle scene",
+     "several products"
+    ]
+   },
+   "similar_rank": 4,
+   "calls": 3,
+   "input_tokens": 2970,
+   "output_tokens": 767,
+   "cost_usd": 0.001893,
+   "latency_ms": 39103
+  },
+  {
+   "id": "B0853P8YB2",
+   "name": "AmazonBasics Solar-Powered Motion Sensor Accent Light for Front Door, Patio, Yard, and Porch - 10 LED, 100 Lumen, 4-Pack",
+   "category": "Lighting",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/66/668f4a78.jpg",
+   "truth": {
+    "color": "Black",
+    "material": "Acrylonitrile Butadiene Styrene"
+   },
+   "facts": {
+    "category": "Lighting",
+    "product_type": "solar wall lights",
+    "colors": [
+     "black",
+     "white"
+    ],
+    "materials": [
+     "plastic"
+    ],
+    "style": "modern",
+    "features": [
+     "solar panel",
+     "motion sensor",
+     "four lights",
+     "slanted top",
+     "white light diffuser"
+    ],
+    "photo_issues": [
+     "several products"
+    ]
+   },
+   "category_ok": true,
+   "colour_ok": true,
+   "material_ok": null,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Solar Wall Lights Modern Motion Sensor Outdoor Lighting",
+     "description": "Illuminate your outdoor space with these modern solar wall lights. Each unit features a solar panel and a motion sensor for automated functionality. Designed with a distinct slanted top, the fixture includes four lights and a white light diffuser for even illumination. These wall lights are available in either black or white plastic finishes. Each set contains several products to provide coverage for your home exterior. The modern aesthetic integrates well into various building designs while utilizing renewable solar energy for operation. These lights provide a practical lighting solution for wall-mounted applications. Please note that each unit is constructed from durable plastic materials to withstand outdoor conditions. Installation is straightforward for those looking to add functional lighting to walls or entryways. Enhance visibility around your property with these versatile solar-powered wall lighting solutions.",
+     "tags": [
+      "solar wall lights",
+      "outdoor lighting",
+      "motion sensor",
+      "modern lighting",
+      "solar powered",
+      "exterior lights",
+      "wall lamps",
+      "solar lamps",
+      "led wall lights",
+      "modern decor",
+      "black wall light",
+      "white wall light",
+      "garden lighting"
+     ],
+     "seo_title": "Modern Solar Wall Lights with Motion Sensor | Outdoor Lighting",
+     "seo_description": "Upgrade your exterior with our modern solar wall lights featuring motion sensors, a slanted top design, and four lights. Available in black or white."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Reduce energy usage with our motion-sensing solar wall lights. Available in black or white to suit your exterior design.",
+      "headline": "Efficient Solar Wall Lighting",
+      "description": "Solar powered and automatic."
+     },
+     {
+      "angle": "style",
+      "primary_text": "Bring a modern look to your home exterior with these solar wall lights. Features a slanted top and clean plastic finish.",
+      "headline": "Modern Outdoor Wall Lighting",
+      "description": "Sleek modern design."
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need outdoor lighting without complicated wiring? These solar wall lights feature a motion sensor for easy operation.",
+      "headline": "Simple Solar Lighting",
+      "description": "Motion sensor activated."
+     }
+    ]
+   },
+   "unsupported_claims": [],
+   "alt_facts": {
+    "category": "Lighting",
+    "product_type": "solar wall light",
+    "colors": [
+     "black",
+     "white"
+    ],
+    "materials": [
+     "plastic"
+    ],
+    "style": "modern",
+    "features": [
+     "solar panel",
+     "motion sensor",
+     "wall mounted",
+     "curved design"
+    ],
+    "photo_issues": []
+   },
+   "similar_rank": 2,
+   "calls": 3,
+   "input_tokens": 2972,
+   "output_tokens": 703,
+   "cost_usd": 0.001798,
+   "latency_ms": 98858
+  },
+  {
+   "id": "B084HTZ2C6",
+   "name": "Amazon Brand - Rivet Modern Round Hanging Mirror with Shelf, 18\" Diameter, Gold",
+   "category": "Mirrors",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/fc/fcf7d3ce.jpg",
+   "truth": {
+    "color": "Brass",
+    "material": "metal"
+   },
+   "facts": {
+    "category": "Mirrors",
+    "product_type": "round wall mirror with shelf",
+    "colors": [
+     "gold",
+     "silver"
+    ],
+    "materials": [
+     "metal",
+     "glass"
+    ],
+    "style": "modern",
+    "features": [
+     "round shape",
+     "built-in bottom shelf",
+     "metallic frame finish"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": true,
+   "material_ok": true,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Round Wall Mirror with Shelf - Modern Metal Mirror in Gold or Silver",
+     "description": "Upgrade your living space with this modern round wall mirror featuring a convenient built-in bottom shelf. Designed for both form and function, this piece combines a sleek metallic frame finish with a classic glass surface. The circular shape offers a clean silhouette suitable for various rooms in the home. Whether you choose the warm tones of the gold frame or the contemporary look of the silver frame, this mirror adds a refined touch to your interior decor. The integrated shelf provides a handy ledge for small items, blending utility with minimalist design. Crafted from metal and glass, this mirror is a versatile addition to your entryway, hallway, or bedroom. Enhance your walls with a functional statement piece that integrates easily into existing decor schemes. This item is available for 251.99 USD.",
+     "tags": [
+      "round mirror",
+      "wall mirror",
+      "mirror with shelf",
+      "modern mirror",
+      "gold mirror",
+      "silver mirror",
+      "metal mirror",
+      "entryway mirror",
+      "decorative mirror",
+      "glass mirror",
+      "round wall decor",
+      "home mirror",
+      "metallic mirror"
+     ],
+     "seo_title": "Modern Round Wall Mirror with Shelf | Gold or Silver Metal Finish",
+     "seo_description": "Enhance your home with this modern round wall mirror featuring a built-in shelf. Available in gold or silver metallic metal finishes for a sleek look."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Organize and reflect in style with our round wall mirror featuring a built-in bottom shelf. Perfect for your home.",
+      "headline": "Modern Mirror with Added Shelf",
+      "description": "Functional Decor"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Elevate your decor with this modern circular mirror. Available in gold or silver metallic finishes.",
+      "headline": "Sleek Modern Round Mirror",
+      "description": "Gold or Silver Finish"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need a place for small items near your mirror? Our round wall mirror includes a built-in shelf to keep surfaces clear.",
+      "headline": "Mirror with Built-in Storage",
+      "description": "Clear Your Surface"
+     }
+    ]
+   },
+   "unsupported_claims": [],
+   "alt_facts": {
+    "category": "Mirrors",
+    "product_type": "round wall mirror with shelf",
+    "colors": [
+     "gold"
+    ],
+    "materials": [
+     "metal"
+    ],
+    "style": "modern",
+    "features": [
+     "integrated shelf",
+     "circular frame",
+     "wall mountable"
+    ],
+    "photo_issues": []
+   },
+   "similar_rank": 1,
+   "calls": 3,
+   "input_tokens": 2952,
+   "output_tokens": 727,
+   "cost_usd": 0.001829,
+   "latency_ms": 29563
+  },
+  {
+   "id": "B088S8VLMW",
+   "name": "Stone & Beam Bradbury Chesterfield Classic Ottoman, 30\"W, Slate (Renewed)",
+   "category": "Ottomans & Stools",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/81/8195c2a5.jpg",
+   "truth": {
+    "color": "Slate",
+    "material": null
+   },
+   "facts": {
+    "category": "Ottomans & Stools",
+    "product_type": "ottoman",
+    "colors": [
+     "beige"
+    ],
+    "materials": [
+     "fabric",
+     "wood"
+    ],
+    "style": "traditional",
+    "features": [
+     "tufted button detail",
+     "turned wooden legs",
+     "rectangular cushion top"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": false,
+   "material_ok": null,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Beige Fabric Ottoman with Tufted Button Detail and Turned Wooden Legs",
+     "description": "Enhance your living space with this traditional ottoman, designed to provide a classic look for your home. This rectangular piece is upholstered in beige fabric, offering a neutral tone that fits various interiors. The top features a tufted button detail, which adds a subtle textured element to the design. Supporting the frame are turned wooden legs, providing a sturdy foundation while maintaining the aesthetic appeal of the piece. The combination of fabric and wood materials ensures a coordinated appearance suitable for a living room, bedroom, or entryway. Whether you need an additional seat or a surface to rest your feet, this ottoman serves as a functional and stylish addition to your furniture collection. Its classic silhouette makes it a versatile choice for traditional home decor. Please note that this item is priced at 172.99 USD.",
+     "tags": [
+      "beige ottoman",
+      "traditional stool",
+      "tufted ottoman",
+      "fabric ottoman",
+      "wooden legs",
+      "living room decor",
+      "bedroom ottoman",
+      "rectangular stool",
+      "home furnishing",
+      "accent furniture",
+      "tufted fabric",
+      "classic ottoman",
+      "wooden stool"
+     ],
+     "seo_title": "Traditional Beige Fabric Ottoman with Tufted Button Detail",
+     "seo_description": "Shop this traditional beige fabric ottoman featuring tufted button details and turned wooden legs. A versatile and classic addition to any home."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Add functional seating and a classic touch to your home with this beige fabric ottoman. Priced at 172.99 USD.",
+      "headline": "Upgrade Your Living Space",
+      "description": "Classic fabric ottoman"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Bring traditional elegance to your room with this tufted beige ottoman, complete with refined turned wooden legs.",
+      "headline": "Classic Traditional Design",
+      "description": "Beige fabric finish"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need a versatile accent piece? This rectangular beige ottoman with turned wooden legs fits perfectly in any room.",
+      "headline": "The Perfect Accent Piece",
+      "description": "Sturdy wood and fabric"
+     }
+    ]
+   },
+   "unsupported_claims": [],
+   "alt_facts": {
+    "category": "Ottomans & Stools",
+    "product_type": "ottoman",
+    "colors": [
+     "grey"
+    ],
+    "materials": [
+     "fabric",
+     "wood"
+    ],
+    "style": "traditional",
+    "features": [
+     "tufted button detailing",
+     "turned wooden legs",
+     "square shape",
+     "upholstered base"
+    ],
+    "photo_issues": [
+     "cropped"
+    ]
+   },
+   "similar_rank": null,
+   "calls": 3,
+   "input_tokens": 2966,
+   "output_tokens": 710,
+   "cost_usd": 0.001806,
+   "latency_ms": 32002
+  },
+  {
+   "id": "B079TXJTY4",
+   "name": "Amazon Brand – Rivet Transitional Tufted Dot Diamond Decorative Throw Pillow, 17\" x 17\" , Navy",
+   "category": "Pillows & Throws",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/ce/ce80f4cc.jpg",
+   "truth": {
+    "color": "Navy",
+    "material": null
+   },
+   "facts": {
+    "category": "Pillows & Throws",
+    "product_type": "throw pillow",
+    "colors": [
+     "cream",
+     "navy blue"
+    ],
+    "materials": [
+     "fabric",
+     "embroidery"
+    ],
+    "style": "bohemian",
+    "features": [
+     "square shape",
+     "geometric pattern",
+     "tufted dots",
+     "embroidered lines"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": true,
+   "material_ok": null,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Throw Pillow, Square Navy Blue and Cream Bohemian Geometric Embroidered",
+     "description": "Refresh your living space with this square throw pillow. Featuring a classic combination of navy blue and cream colors, this piece fits perfectly into a bohemian style interior. The fabric cover is detailed with a geometric pattern, enhanced by soft tufted dots and embroidered lines for added texture. This throw pillow provides a distinct decorative accent for sofas, chairs, or beds. The embroidery adds subtle dimension to the clean geometric design. Whether you are looking to update your decor or add a layer of texture to your room, this versatile throw pillow is a functional choice. Its simple yet elegant design makes it easy to integrate with various decor themes. Measuring in a standard square shape, it remains a timeless addition to any home furnishing collection. Bring a refined aesthetic to your seating area with these neutral and deep tones.",
+     "tags": [
+      "throw pillow",
+      "bohemian decor",
+      "navy blue pillow",
+      "cream throw pillow",
+      "geometric pillow",
+      "embroidered pillow",
+      "tufted pillow",
+      "square pillow",
+      "fabric pillow",
+      "boho home decor",
+      "accent pillow",
+      "decorative pillow",
+      "living room decor"
+     ],
+     "seo_title": "Navy Blue and Cream Bohemian Square Throw Pillow",
+     "seo_description": "Add bohemian style to your home with this square navy blue and cream throw pillow. Features geometric embroidery and tufted dots for textured decor."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Update your decor with our navy blue and cream geometric throw pillow. Perfect for adding texture to any living space.",
+      "headline": "Elevate Your Home Decor",
+      "description": "Stylish geometric design"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Embrace a bohemian look with this square throw pillow. Featuring embroidered lines and tufted dots on fabric.",
+      "headline": "Bohemian Style Throw Pillow",
+      "description": "Navy blue and cream"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need a finishing touch for your sofa or chair? This square throw pillow adds texture and pattern to any room.",
+      "headline": "Complete Your Room Decor",
+      "description": "Embroidered geometric detail"
+     }
+    ]
+   },
+   "unsupported_claims": [],
+   "alt_facts": {
+    "category": "Pillows & Throws",
+    "product_type": "throw pillow",
+    "colors": [
+     "navy blue"
+    ],
+    "materials": [
+     "fabric"
+    ],
+    "style": "minimalist",
+    "features": [
+     "square shape",
+     "textured surface",
+     "solid color"
+    ],
+    "photo_issues": []
+   },
+   "similar_rank": 2,
+   "calls": 3,
+   "input_tokens": 2969,
+   "output_tokens": 711,
+   "cost_usd": 0.001809,
+   "latency_ms": 42858
+  },
+  {
+   "id": "B07SCNS9Q7",
+   "category": "Planters",
+   "error": "504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}"
+  },
+  {
+   "id": "B071W2XLQJ",
+   "name": "Amazon Brand – Rivet Shaggy Short Rug, 5' x 8', Taupe",
+   "category": "Rugs",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/3b/3b82f785.jpg",
+   "truth": {
+    "color": "Taupe",
+    "material": null
+   },
+   "facts": {
+    "category": "Sofas",
+    "product_type": "sectional sofa",
+    "colors": [
+     "charcoal gray"
+    ],
+    "materials": [
+     "fabric",
+     "wood"
+    ],
+    "style": "modern",
+    "features": [
+     "chaise lounge",
+     "tapered legs",
+     "three seat cushions",
+     "track arms"
+    ],
+    "photo_issues": [
+     "lifestyle scene",
+     "several products"
+    ]
+   },
+   "category_ok": false,
+   "colour_ok": false,
+   "material_ok": null,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Sectional Sofa in Charcoal Gray Fabric with Chaise Lounge",
+     "description": "Upgrade your living room with this modern sectional sofa. Finished in a versatile charcoal gray fabric, this piece features a clean design with distinct track arms and three seat cushions for a structured look. The sectional includes a chaise lounge component, offering an extended seating area that integrates seamlessly into the overall frame. Designed with mid-century inspired tapered wood legs, this sofa provides a stable foundation while maintaining a lightweight aesthetic. The contemporary profile makes it a suitable addition to various modern home interiors. This piece combines functional design elements with a neutral color palette to complement your existing furniture. Whether you are arranging a new space or updating your current setup, this sectional sofa offers a clear, modern silhouette. Each component is crafted to work together, ensuring a cohesive look for your living area. Please note that this listing is for the sectional sofa as shown.",
+     "tags": [
+      "sectional sofa",
+      "charcoal sofa",
+      "modern sofa",
+      "chaise lounge",
+      "gray sectional",
+      "fabric sofa",
+      "living room sofa",
+      "track arm sofa",
+      "tapered leg sofa",
+      "modern furniture",
+      "three seat sofa",
+      "gray fabric sofa",
+      "wood leg sofa"
+     ],
+     "seo_title": "Modern Charcoal Gray Fabric Sectional Sofa with Chaise",
+     "seo_description": "Shop this modern charcoal gray fabric sectional sofa featuring a chaise lounge, track arms, and tapered wood legs. Ideal for contemporary homes."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Enhance your living space with this modern charcoal gray sectional sofa featuring a chaise lounge for added seating.",
+      "headline": "Modern Charcoal Sectional Sofa",
+      "description": "Stylish gray fabric sofa"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Discover a modern sectional sofa with clean lines, track arms, and tapered wood legs in a sophisticated charcoal gray.",
+      "headline": "Modern Minimalist Design",
+      "description": "Charcoal gray fabric finish"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need a flexible seating solution? This modern charcoal gray sectional with a chaise lounge fits your living space.",
+      "headline": "Flexible Sectional Seating",
+      "description": "Modern track arm design"
+     }
+    ]
+   },
+   "unsupported_claims": [],
+   "alt_facts": {
+    "category": "Rugs",
+    "product_type": "shag rug",
+    "colors": [
+     "beige"
+    ],
+    "materials": [
+     "fabric"
+    ],
+    "style": "modern",
+    "features": [
+     "shag pile",
+     "rolled",
+     "textured backing"
+    ],
+    "photo_issues": [
+     "cropped"
+    ]
+   },
+   "similar_rank": 8,
+   "calls": 3,
+   "input_tokens": 2976,
+   "output_tokens": 759,
+   "cost_usd": 0.001883,
+   "latency_ms": 84010
+  },
+  {
+   "id": "B07HSCJZQM",
+   "name": "Amazon Brand – Rivet Roxmere Modern Ladder Bookcase, 23.6\"W, Acacia Wood and Dark Metal",
+   "category": "Shelves & Storage",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/c3/c3249cb5.jpg",
+   "truth": {
+    "color": "Multi-colour",
+    "material": "Acacia"
+   },
+   "facts": {
+    "category": "Shelves & Storage",
+    "product_type": "ladder bookshelf",
+    "colors": [
+     "brown",
+     "grey"
+    ],
+    "materials": [
+     "wood",
+     "metal"
+    ],
+    "style": "industrial",
+    "features": [
+     "four tiered shelves",
+     "rectangular storage compartment",
+     "metal frame",
+     "leaning design"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": null,
+   "material_ok": true,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Industrial Ladder Bookshelf with Four Shelves and Storage Compartment",
+     "description": "Upgrade your living space with this industrial style ladder bookshelf. This versatile unit features a sturdy metal frame paired with wooden shelving to create a sleek and functional storage solution for any room. The leaning design provides a modern look while maximizing floor space. Equipped with four tiered shelves, this unit offers ample surface area for displaying books, decor, or personal items. Additionally, the integrated rectangular storage compartment provides a convenient space for organizing smaller objects out of sight. Available in both brown and grey finishes, this bookshelf seamlessly blends with various interior aesthetics. The combination of metal and wood materials ensures a clean look suitable for home or office settings. This bookshelf unit is priced at 304.99 dollars and requires assembly upon arrival. Enhance your storage capacity with this balanced piece that marries industrial design with practical utility.",
+     "tags": [
+      "ladder bookshelf",
+      "industrial shelf",
+      "wood bookshelf",
+      "metal storage",
+      "leaning shelf",
+      "four tier shelf",
+      "brown bookshelf",
+      "grey bookshelf",
+      "home storage",
+      "display shelf",
+      "modern shelving",
+      "office bookshelf",
+      "living room shelf"
+     ],
+     "seo_title": "Industrial Ladder Bookshelf - Four Tier Storage - Metal and Wood",
+     "seo_description": "Organize your space with this industrial ladder bookshelf featuring four tiered shelves and a rectangular storage compartment in wood and metal."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Maximize your storage space with this industrial four-tier ladder bookshelf featuring a rectangular storage compartment.",
+      "headline": "Upgrade Your Storage Today",
+      "description": "Four Tier Ladder Shelf"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Bring an industrial aesthetic to your home with this metal and wood leaning bookshelf available in brown or grey.",
+      "headline": "Industrial Style Decor",
+      "description": "Metal and Wood Design"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need more room for your belongings? This ladder bookshelf includes a storage compartment to help clear your clutter.",
+      "headline": "Organize Your Room Easily",
+      "description": "Leaning Storage Shelf"
+     }
+    ]
+   },
+   "unsupported_claims": [
+    "requires assembly upon arrival"
+   ],
+   "alt_facts": {
+    "category": "Shelves & Storage",
+    "product_type": "ladder shelf",
+    "colors": [
+     "brown",
+     "black"
+    ],
+    "materials": [
+     "wood",
+     "metal"
+    ],
+    "style": "industrial",
+    "features": [
+     "ladder frame",
+     "open shelving",
+     "box shelf insert",
+     "tapered frame"
+    ],
+    "photo_issues": [
+     "cropped"
+    ]
+   },
+   "similar_rank": null,
+   "calls": 3,
+   "input_tokens": 2965,
+   "output_tokens": 747,
+   "cost_usd": 0.001862,
+   "latency_ms": 90436
+  },
+  {
+   "id": "B07K8V2Y7R",
+   "name": "Amazon Brand - Movian Borgan - 3-Seater Sofa, 187 x 85 x 81 cm, Dust Blue",
+   "category": "Sofas",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/08/08764afd.jpg",
+   "truth": {
+    "color": "Dust Blue",
+    "material": "Polyester"
+   },
+   "facts": {
+    "category": "Sofas",
+    "product_type": "loveseat",
+    "colors": [
+     "light blue"
+    ],
+    "materials": [
+     "fabric",
+     "wood"
+    ],
+    "style": "mid-century modern",
+    "features": [
+     "tapered wooden legs",
+     "curved armrests",
+     "two seat cushions",
+     "integrated backrest"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": true,
+   "colour_ok": true,
+   "material_ok": true,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Loveseat Mid-Century Modern Fabric Sofa Light Blue with Tapered Wooden Legs",
+     "description": "Enhance your living space with this mid-century modern loveseat. Upholstered in light blue fabric, this piece features a classic design defined by elegant curved armrests and a smooth integrated backrest. It provides seating for two with two distinct seat cushions. The structure is supported by tapered wooden legs that provide a clean look and a stable foundation for the frame. This loveseat is designed to fit well in various home settings, offering a minimalist aesthetic that complements modern interior decor styles. It is a functional piece of furniture that serves as a focal point in a living room or a study area. The combination of fabric upholstery and wooden elements creates a balanced look suitable for contemporary homes. This light blue loveseat brings a subtle touch of color while maintaining a sophisticated silhouette suitable for daily use.",
+     "tags": [
+      "loveseat",
+      "light blue sofa",
+      "mid century modern",
+      "fabric loveseat",
+      "wooden legs",
+      "small sofa",
+      "living room sofa",
+      "modern furniture",
+      "curved armrest",
+      "two seater sofa",
+      "blue furniture",
+      "modern loveseat",
+      "accent sofa"
+     ],
+     "seo_title": "Light Blue Mid-Century Modern Fabric Loveseat with Wooden Legs",
+     "seo_description": "Shop this light blue mid-century modern loveseat featuring curved armrests and tapered wooden legs. A stylish two-seater sofa for your home."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Upgrade your living area with this light blue fabric loveseat, featuring a clean mid-century modern design.",
+      "headline": "Stylish Mid-Century Loveseat",
+      "description": "Elegant Fabric Finish"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Bring home the mid-century modern look with this light blue loveseat, complete with tapered wooden legs.",
+      "headline": "Modern Design for Your Home",
+      "description": "Light Blue Fabric Style"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need a compact seating solution? This light blue loveseat fits perfectly in smaller spaces with classic style.",
+      "headline": "Compact Two-Seater Sofa",
+      "description": "Mid-Century Modern Look"
+     }
+    ]
+   },
+   "unsupported_claims": [
+    "fits perfectly in smaller spaces"
+   ],
+   "alt_facts": {
+    "category": "Sofas",
+    "product_type": "sofa backrest",
+    "colors": [
+     "blue"
+    ],
+    "materials": [
+     "velvet"
+    ],
+    "style": "modern",
+    "features": [
+     "scalloped backrest",
+     "upholstered",
+     "two cushion sections"
+    ],
+    "photo_issues": [
+     "cropped"
+    ]
+   },
+   "similar_rank": 5,
+   "calls": 3,
+   "input_tokens": 2951,
+   "output_tokens": 793,
+   "cost_usd": 0.001927,
+   "latency_ms": 24248
+  },
+  {
+   "id": "B07PMS5D2D",
+   "name": "Amazon Brand - Solimo Xena Solid Wood Console Table (Cocoa Finish)",
+   "category": "Tables",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/a7/a7545b36.jpg",
+   "truth": {
+    "color": "Espresso",
+    "material": "Wood"
+   },
+   "facts": {
+    "category": "Tables",
+    "product_type": "console table",
+    "colors": [
+     "dark brown"
+    ],
+    "materials": [
+     "wood"
+    ],
+    "style": "contemporary",
+    "features": [
+     "rectangular tabletop",
+     "four straight legs",
+     "smooth finish"
+    ],
+    "photo_issues": [
+     "lifestyle scene",
+     "several products"
+    ]
+   },
+   "category_ok": true,
+   "colour_ok": true,
+   "material_ok": true,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Console Table Dark Brown Wood Contemporary Rectangular Tabletop",
+     "description": "Upgrade your living space with this contemporary console table. Crafted from wood and finished in a rich dark brown color, this piece offers a clean look for any room. The design features a rectangular tabletop paired with four straight legs for a balanced and minimalist silhouette. The smooth finish highlights the refined aesthetic of the wood, making it a versatile addition to your home furniture collection. Whether placed in an entryway, hallway, or living room, this console table provides a practical surface for your decor and personal items. Its modern profile blends easily with various interior styles while maintaining a functional footprint. The construction focuses on simplicity and clean lines to ensure the table remains a focal point in your home. Enhance your hallway or lounge area with this elegant wood console table that combines contemporary design with classic dark brown tones for a sophisticated finish.",
+     "tags": [
+      "console table",
+      "wood table",
+      "dark brown table",
+      "contemporary table",
+      "entryway table",
+      "hallway table",
+      "rectangular table",
+      "wood furniture",
+      "modern table",
+      "living room table",
+      "home decor",
+      "side table",
+      "accent table"
+     ],
+     "seo_title": "Contemporary Dark Brown Wood Console Table | Rectangular Design",
+     "seo_description": "Enhance your home with this contemporary dark brown wood console table. Featuring a rectangular tabletop and four straight legs for a modern aesthetic."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Elevate your interior space with this sleek dark brown wood console table, perfect for displaying your favorite home decor.",
+      "headline": "Modern Wood Console Table",
+      "description": "Shop the latest design"
+     },
+     {
+      "angle": "style",
+      "primary_text": "Achieve a sophisticated look with our contemporary console table, featuring a smooth dark brown finish and minimalist lines.",
+      "headline": "Contemporary Furniture Style",
+      "description": "Elevate your home decor"
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Need a surface for your entryway or hall? This contemporary wood console table fits perfectly in any home space.",
+      "headline": "Upgrade Your Hallway",
+      "description": "Functional wood table"
+     }
+    ]
+   },
+   "unsupported_claims": [],
+   "alt_facts": {
+    "category": "Tables",
+    "product_type": "console table",
+    "colors": [
+     "dark brown"
+    ],
+    "materials": [
+     "wood"
+    ],
+    "style": "minimalist",
+    "features": [
+     "rectangular tabletop",
+     "four straight legs"
+    ],
+    "photo_issues": [
+     "dimension diagram"
+    ]
+   },
+   "similar_rank": 7,
+   "calls": 3,
+   "input_tokens": 2960,
+   "output_tokens": 697,
+   "cost_usd": 0.001785,
+   "latency_ms": 66264
+  },
+  {
+   "id": "B073P19S6V",
+   "category": "Wall Art",
+   "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  },
+  {
+   "id": "B07B4W2FKR",
+   "name": "Amazon Brand – Rivet A8910 Dresser",
+   "category": "Beds & Headboards",
+   "image_url": "https://amazon-berkeley-objects.s3.amazonaws.com/images/small/fc/fc68397a.jpg",
+   "truth": {
+    "color": null,
+    "material": "Wood"
+   },
+   "facts": {
+    "category": "Shelves & Storage",
+    "product_type": "dresser",
+    "colors": [
+     "light brown",
+     "medium brown",
+     "dark brown"
+    ],
+    "materials": [
+     "wood",
+     "metal"
+    ],
+    "style": "rustic",
+    "features": [
+     "six drawers",
+     "patchwork wood grain",
+     "black bar pulls",
+     "short cylindrical legs"
+    ],
+    "photo_issues": []
+   },
+   "category_ok": false,
+   "colour_ok": null,
+   "material_ok": true,
+   "violations_by_round": [
+    []
+   ],
+   "copy_passed": true,
+   "copy": {
+    "listing": {
+     "title": "Rustic Wood Dresser with Six Drawers and Patchwork Grain",
+     "description": "Elevate your bedroom or living space with this rustic dresser featuring a distinct patchwork wood grain finish. The piece is constructed from a combination of wood and metal, showcasing a blend of light brown, medium brown, and dark brown tones that add visual depth to any interior design. It is equipped with six spacious drawers, providing ample storage for clothing or household essentials. Each drawer is accented with modern black bar pulls that contrast beautifully against the natural wood textures. The unit is supported by short cylindrical legs, creating a balanced and stable foundation. Designed with a timeless rustic aesthetic, this dresser integrates seamlessly into various home decors. Priced at 915.99 USD, this storage solution offers a functional and stylish addition to your furniture collection. Its sturdy build and detailed wood work make it a standout choice for those looking for a piece that emphasizes natural materials and classic design elements in their storage furniture.",
+     "tags": [
+      "rustic dresser",
+      "wood dresser",
+      "six drawer dresser",
+      "storage furniture",
+      "patchwork wood",
+      "bedroom dresser",
+      "metal and wood",
+      "brown dresser",
+      "modern rustic",
+      "living room storage",
+      "wooden chest",
+      "drawer unit",
+      "home storage"
+     ],
+     "seo_title": "Rustic Wood Dresser with Six Drawers and Patchwork Grain",
+     "seo_description": "Organize your home with this rustic wood dresser featuring six drawers, a patchwork grain design, and black metal bar pulls. Priced at 915.99 USD."
+    },
+    "ads": [
+     {
+      "angle": "benefit",
+      "primary_text": "Maximize your storage with this six-drawer dresser. Features a unique patchwork wood grain and durable metal accents.",
+      "headline": "Upgrade Your Home Storage",
+      "description": "Six spacious drawers."
+     },
+     {
+      "angle": "style",
+      "primary_text": "Complete your space with rustic charm. This wood dresser features a blend of brown tones and sleek black bar pulls.",
+      "headline": "Rustic Wood Aesthetic",
+      "description": "Patchwork wood grain."
+     },
+     {
+      "angle": "problem-solution",
+      "primary_text": "Tired of clutter? This dresser offers six drawers to help you organize your belongings in style.",
+      "headline": "Organize Your Space",
+      "description": "Functional rustic design."
+     }
+    ]
+   },
+   "unsupported_claims": [
+    "Each drawer is accented with modern black bar pulls that contrast beautifully against the natural wood textures",
+    "Its sturdy build and detailed wood work make it a standout choice for those looking for a piece that emphasizes natural materials",
+    "Features a unique patchwork wood grain and durable metal accents"
+   ],
+   "alt_facts": {
+    "category": "Shelves & Storage",
+    "product_type": "dresser",
+    "colors": [
+     "brown",
+     "tan",
+     "black"
+    ],
+    "materials": [
+     "wood",
+     "metal"
+    ],
+    "style": "rustic",
+    "features": [
+     "six drawers",
+     "patchwork wood pattern",
+     "black bar handles",
+     "short legs"
+    ],
+    "photo_issues": []
+   },
+   "similar_rank": null,
+   "calls": 3,
+   "input_tokens": 2974,
+   "output_tokens": 756,
+   "cost_usd": 0.001878,
+   "latency_ms": 30307
+  },
+  {
+   "id": "B075X5TMV6",
+   "category": "Chairs",
+   "error": "Error calling model 'gemini-3.1-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. T"
+  },
+  {
+   "id": "B0853PBGCD",
+   "category": "Lighting",
+   "error": "Error calling model 'gemini-3.1-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. T"
+  },
+  {
+   "id": "B07HSK9SVW",
+   "category": "Mirrors",
+   "error": "Error calling model 'gemini-3.1-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. T"
+  },
+  {
+   "id": "B07GZMSRNF",
+   "category": "Ottomans & Stools",
+   "error": "Error calling model 'gemini-3.1-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. T"
+  },
+  {
+   "id": "B07JPGP464",
+   "category": "Pillows & Throws",
+   "error": "Error calling model 'gemini-3.1-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. T"
+  },
+  {
+   "id": "B075HXLWSB",
+   "category": "Planters",
+   "error": "Error calling model 'gemini-3.1-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. T"
+  },
+  {
+   "id": "B075TZF1TT",
+   "category": "Rugs",
+   "error": "Error calling model 'gemini-3.1-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. T"
+  },
+  {
+   "id": "B07PPNNCM2",
+   "category": "Shelves & Storage",
+   "error": "Error calling model 'gemini-3.1-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. T"
+  },
+  {
+   "id": "B07J2YB48B",
+   "category": "Sofas",
+   "error": "Error calling model 'gemini-3.1-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. T"
+  },
+  {
+   "id": "B07RKKHMXX",
+   "category": "Tables",
+   "error": "Error calling model 'gemini-3.1-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. T"
+  },
+  {
+   "id": "B073P19TQ9",
+   "category": "Wall Art",
+   "error": "Error calling model 'gemini-3.1-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. T"
+  },
+  {
+   "id": "B075XZMMG7",
+   "category": "Beds & Headboards",
+   "error": "Error calling model 'gemini-3.1-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. T"
+  },
+  {
+   "id": "B008U4QERG",
+   "category": "Chairs",
+   "error": "Error calling model 'gemini-3.1-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. T"
+  },
+  {
+   "id": "B07DBJ965S",
+   "category": "Lighting",
+   "error": "Error calling model 'gemini-3.1-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. T"
+  },
+  {
+   "id": "B071KX42WG",
+   "category": "Mirrors",
+   "error": "Error calling model 'gemini-3.1-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. T"
+  }
+ ]
+}

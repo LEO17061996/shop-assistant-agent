@@ -45,6 +45,40 @@ Retrieval eval: 80 shopper-style queries, no model in the loop.
 | hybrid + category filter | 91% | 100% | 0.95 |
 <!-- RESULTS:END -->
 
+## Project B: Listing Studio
+
+**[/studio](https://kestrel-home.vercel.app/studio)**: upload a product photo (or pick one from the catalog) and get a marketplace listing, SEO title and description, three Meta ads, similar products from the store, and a Shopify import CSV.
+
+- **Vision → structured facts**: Gemini reads category, colours, materials, style and visible features into a Pydantic schema, and flags photo problems (dimension diagram, lifestyle scene, several products).
+- **Copy from facts only**: a second call writes the listing and ads from those facts plus the seller's notes (price, size, offers). Anything a photo cannot prove, like assembly, durability, "handmade" or "free shipping", is off limits unless the seller says so.
+- **Check → repair loop**: code checks every draft against platform limits (Etsy title 140, 13 tags of ≤ 20 characters, SEO title 70, meta description 50–160, Meta ad text 125/40/30), risky ad claims ("best", "#1", "guaranteed", health claims) and numbers that appear in neither the facts nor the notes. Violations go back to the model for a rewrite, at most twice; anything still failing is flagged for a person.
+- **Visual search without an image model**: the photo's description is searched with the store's existing hybrid index, so the free 512 MB host needs no extra RAM. Image-embedding models were measured offline as the comparison.
+- **Shopify CSV**: one draft product per file, HTML-escaped body, only catalog image URLs.
+
+<!-- STUDIO:START -->
+Listing Studio eval: 40 products, scored against the catalog's own metadata.
+
+| Metric | Result |
+|---|---:|
+| Category read from photo | 87% |
+| Colour read from photo | 82% (n=17) |
+| Material read from photo | 85% (n=13) |
+| Copy passes all rules: first draft → after repair loop | 91% → 100% |
+| Copy with no unsupported claims (LLM judge) | 56% |
+| Visual search, other photo of same product: hit@1 / hit@5 | 26% / 56% |
+| Cost per listing* | $0.0019 |
+
+Visual search on the same 23 query photos (image models also on all 435):
+
+| Approach | hit@1 | hit@5 | Extra RAM | hit@5, all |
+|---|---:|---:|---:|---:|
+| Gemini describes photo → hybrid text search (live) | 26% | 56% | 0 MB | – |
+| Qdrant/clip-ViT-B-32-vision embeddings | 43% | 52% | 454 MB | 59% |
+| google/siglip2-base-patch16-224 embeddings | 70% | 83% | 1232 MB | 85% |
+| nomic-ai/nomic-embed-vision-v1.5-Q embeddings | 43% | 52% | 1580 MB | 64% |
+| Qdrant/resnet50-onnx embeddings | 30% | 39% | 543 MB | 48% |
+<!-- STUDIO:END -->
+
 ## Architecture
 
 ```

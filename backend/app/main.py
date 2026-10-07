@@ -9,8 +9,8 @@ error     something failed; the message is safe to show
 """
 
 import json
+import logging
 import time
-from collections import defaultdict, deque
 from contextlib import asynccontextmanager
 from typing import Literal
 
@@ -24,9 +24,12 @@ from app import catalog
 from app.agent.graph import get_graph, to_messages
 from app.agent.llm import cost_usd, model_name
 from app.config import get_settings
+from app.limits import check_rate_limit
 from app.rag.index import embed_query
+from app.studio.routes import router as studio_router
 
 settings = get_settings()
+log = logging.getLogger(__name__)
 
 
 @asynccontextmanager
@@ -44,6 +47,7 @@ app.add_middleware(
     allow_methods=["GET", "POST"],
     allow_headers=["Content-Type"],
 )
+app.include_router(studio_router)
 
 
 class ChatMessage(BaseModel):
@@ -57,29 +61,8 @@ class ChatRequest(BaseModel):
     prompt_version: Literal["v1", "v2", "v3"] = "v3"
 
 
-_hits: dict[str, deque] = defaultdict(deque)
-
-
-def check_rate_limit(ip: str) -> None:
-    now = time.monotonic()
-    q = _hits[ip]
-    while q and now - q[0] > 60:
-        q.popleft()
-    if len(q) >= settings.rate_limit_per_minute:
-        raise HTTPException(429, "Too many messages. Please wait a minute.")
-    q.append(now)
-
-
-def client_ip(request: Request) -> str:
-    # Behind a hosting proxy every request comes from the proxy; the real client is first in X-Forwarded-For
-    forwarded = request.headers.get("x-forwarded-for")
-    if forwarded:
-        return forwarded.split(",")[0].strip()
-    return request.client.host if request.client else "unknown"
-
-
 def sse(event: str, data: dict) -> dict:
-    return {"event": event, "data": json.dumps(data, ensure_ascii=False)}
+    return {"event": event, "data": json.dumps(data, ensure_ascii=False, default=str)}
 
 
 @app.get("/api/health")
@@ -97,7 +80,7 @@ def product(product_id: str):
 
 @app.post("/api/chat")
 async def chat(req: ChatRequest, request: Request):
-    check_rate_limit(client_ip(request))
+    check_rate_limit(request)
     if req.messages[-1].role != "user":
         raise HTTPException(422, "The last message must come from the user.")
     if len(req.messages[-1].content) > settings.max_user_message_chars:
@@ -148,6 +131,7 @@ async def chat(req: ChatRequest, request: Request):
                             if art.get("handoff"):
                                 yield sse("handoff", art["handoff"])
         except Exception as e:  # provider outages, quota errors
+            log.exception("chat failed")
             msg = (
                 "The assistant is busy right now. Please try again in a minute."
                 if "429" in str(e)
