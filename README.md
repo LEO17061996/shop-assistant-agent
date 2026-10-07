@@ -2,9 +2,9 @@
 
 A customer-support agent for a (fictional) furniture store that ships to the US and UK. It answers product, shipping, returns and order questions by calling tools over a real product catalog, and it comes with an eval suite that measures every change.
 
-**Live demo:** _coming soon_ · **Eval report:** `/eval` · **How it works:** `/how-it-works`
+**Live demo:** [kestrel-home.vercel.app](https://kestrel-home.vercel.app) · **Eval report:** [/eval](https://kestrel-home.vercel.app/eval) · **How it works:** [/how-it-works](https://kestrel-home.vercel.app/how-it-works)
 
-> The live demo runs on the Gemini free tier. Its response time varies a lot (from a few seconds to tens of seconds per model call, sometimes a timeout), so a slow answer is the free tier, not the agent. The ledger shows where the time went.
+> Everything runs on free tiers. The API (Render) sleeps after 15 idle minutes, so the first message can take about a minute while it wakes up. Gemini's free tier is also slow at times (a few seconds to tens of seconds per model call). The ledger next to each answer shows where the time went.
 
 ![Chat with the agent ledger](docs/screenshot-chat.jpg)
 
@@ -89,6 +89,8 @@ python -m eval.retrieval_eval
 python -m eval.rejudge
 cd ../frontend && npm run sync-eval
 ```
+
+Deploy: the API is a Docker image (`backend/Dockerfile`, 1 worker, ~380 MB RAM) described in `render.yaml` (Render free tier, Singapore); the frontend is on Vercel with `NEXT_PUBLIC_API_URL` pointing at the API.
 
 Rebuilding the catalog from the raw dataset (optional; `data/catalog.jsonl` is committed): download `listings/metadata/*.json.gz` and `images/metadata/images.csv.gz` from the [ABO bucket](https://amazon-berkeley-objects.s3.amazonaws.com/index.html) into `backend/data/raw/`, then `python scripts/build_catalog.py`.
 

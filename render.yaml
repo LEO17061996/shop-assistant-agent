@@ -1,0 +1,17 @@
+# Render Blueprint: New → Blueprint → pick this repo. Only GEMINI_API_KEY is asked for.
+services:
+  - type: web
+    name: kestrel-home-api
+    runtime: docker
+    plan: free
+    region: singapore
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        value: '["https://kestrel-home.vercel.app"]'
