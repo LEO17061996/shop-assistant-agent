@@ -22,9 +22,9 @@ from app.studio.schemas import Copy, ProductFacts, SellerNotes, Violation
 MAX_IMAGE_BYTES = 5 * 1024 * 1024
 MAX_SIDE = 768  # enough detail for furniture; fewer image tokens than a full-size photo
 MAX_REPAIRS = 2
-# Checks claims in each draft. Deliberately not the model the eval uses as judge (gemini-3.5-flash-lite),
-# so the eval does not grade the pipeline with the same model it was tuned against.
-CLAIMS_MODEL = "gemini-2.5-flash-lite"
+# Checks claims in each draft. It is the same model the eval uses as judge, because Gemini 2.5 is closed
+# to new API projects; the eval therefore also reports a run without this check (eval/README.md).
+CLAIMS_MODEL = "gemini-3.5-flash-lite"
 
 FACTS_PROMPT = f"""You catalogue product photos for an online home furnishing store.
 Describe only what is visible in the photo. Do not guess hidden materials, sizes, brands or prices.
