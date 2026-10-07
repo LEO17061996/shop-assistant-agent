@@ -22,7 +22,7 @@ from langchain_core.messages.utils import count_tokens_approximately
 from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 
-from app.agent.llm import make_llm
+from app.agent.llm import fallback_model, make_llm, model_name
 from app.agent.prompts import PROMPTS
 from app.agent.tools import TOOLS, TOOLS_BY_NAME
 from app.config import get_settings
@@ -98,8 +98,16 @@ async def run_tool(call: dict) -> ToolMessage:
     return ToolMessage(content=content, artifact=artifact, status=status, tool_call_id=call["id"], name=call["name"])
 
 
-def build_graph(llm: BaseChatModel, system_prompt: str, max_steps: int, history_budget: int):
+def build_graph(
+    llm: BaseChatModel,
+    system_prompt: str,
+    max_steps: int,
+    history_budget: int,
+    fallback: BaseChatModel | None = None,
+):
     model = llm.bind_tools(TOOLS)
+    if fallback is not None:
+        model = model.with_fallbacks([fallback.bind_tools(TOOLS)])
 
     async def agent(state: AgentState):
         history = fit_history(state["messages"], history_budget)
@@ -138,9 +146,13 @@ def build_graph(llm: BaseChatModel, system_prompt: str, max_steps: int, history_
 @lru_cache
 def get_graph(provider: str | None = None, prompt_version: str = "v3", model: str | None = None):
     s = get_settings()
+    provider = provider or s.llm_provider
+    model = model or model_name(provider)
+    fallback = fallback_model(provider, model)
     return build_graph(
         make_llm(provider, model),
         PROMPTS[prompt_version],
         max_steps=s.max_agent_steps,
         history_budget=s.history_token_budget,
+        fallback=make_llm(provider, fallback) if fallback else None,
     )

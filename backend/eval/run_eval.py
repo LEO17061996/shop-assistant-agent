@@ -21,6 +21,7 @@ from langchain_core.messages import AIMessage, ToolMessage
 from app.agent.graph import get_graph, to_messages
 from app.agent.llm import cost_usd, model_name
 from app.agent.prompts import PROMPTS
+from app.config import get_settings
 from eval.checks import Trace, run_checks
 from eval.judge import JUDGE_MODEL, judge, make_judge
 
@@ -148,6 +149,8 @@ async def main() -> None:
     ap.add_argument("--ids", help="comma-separated case ids")
     ap.add_argument("--concurrency", type=int, default=2)
     args = ap.parse_args()
+    # Measure the model under test only; a silent switch to the fallback would mix two models' answers
+    get_settings().gemini_fallback_model = None
 
     model = args.model or model_name(args.provider)
     graph = get_graph(args.provider, args.prompt, args.model)

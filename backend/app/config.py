@@ -22,6 +22,8 @@ class Settings(BaseSettings):
     gemini_api_key: str | None = None
     # Flash-Lite: the free tier allows enough requests per day for a public demo (3.5 Flash allows 20)
     gemini_model: str = "gemini-3.1-flash-lite"
+    # Used when the main model fails (overload, timeout, quota). None disables the fallback.
+    gemini_fallback_model: str | None = "gemini-2.5-flash-lite"
     anthropic_api_key: str | None = None
     # Explicit so a shell-level ANTHROPIC_BASE_URL (proxies, tooling) is never picked up by accident
     anthropic_base_url: str = "https://api.anthropic.com"

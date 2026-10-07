@@ -3,7 +3,7 @@ import asyncio
 from langchain_core.messages import AIMessage, HumanMessage, ToolMessage
 
 from app.agent.graph import GIVE_UP_TEXT, build_graph, fit_history
-from tests.conftest import ScriptedModel, answer, tool_call
+from tests.conftest import FailingModel, ScriptedModel, answer, tool_call
 
 
 def run(model, text="hi", max_steps=6):
@@ -71,3 +71,10 @@ def test_fit_history_keeps_current_turn_and_drops_oldest():
     assert kept[-3:] == current
     assert len(kept) < len(old) + 3
     assert isinstance(kept[0], HumanMessage)
+
+
+def test_fallback_model_answers_when_the_main_one_is_down():
+    primary, backup = FailingModel(), ScriptedModel(script=[answer("Answered by the fallback.")])
+    graph = build_graph(primary, "system", max_steps=6, history_budget=6000, fallback=backup)
+    msgs = asyncio.run(graph.ainvoke({"messages": [HumanMessage("hi")], "steps": 0}))["messages"]
+    assert msgs[-1].content == "Answered by the fallback." and primary.calls >= 1

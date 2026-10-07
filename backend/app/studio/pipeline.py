@@ -12,7 +12,7 @@ from langchain_core.messages import HumanMessage
 from PIL import Image, UnidentifiedImageError
 from pydantic import BaseModel, Field
 
-from app.agent.llm import cost_usd, make_llm
+from app.agent.llm import cost_usd, fallback_model, make_llm
 from app.agent.tools import CATEGORY_GUIDE
 from app.config import get_settings
 from app.rag.search import ProductFilter, search_products
@@ -122,8 +122,12 @@ class CopyResult:
 async def _structured(schema, messages, usage: Usage, model: str | None):
     model = model or get_settings().gemini_model
     llm = make_llm("gemini", model).with_structured_output(schema, include_raw=True)
+    fallback = fallback_model("gemini", model)
+    if fallback:
+        llm = llm.with_fallbacks([make_llm("gemini", fallback).with_structured_output(schema, include_raw=True)])
     out = await llm.ainvoke(messages)
-    usage.add(out["raw"], model)
+    # Price the call by the model that actually answered, which may be the fallback
+    usage.add(out["raw"], (out["raw"].response_metadata or {}).get("model_name") or model)
     if out["parsed"] is None:
         raise ValueError(f"Model output did not match {schema.__name__}: {out['parsing_error']}")
     return out["parsed"]

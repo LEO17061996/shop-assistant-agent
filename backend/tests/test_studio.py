@@ -12,7 +12,7 @@ from app.studio import pipeline, routes
 from app.studio.rules import check
 from app.studio.schemas import AdVariant, Copy, Listing, ProductFacts, SellerNotes
 from app.studio.shopify import to_csv
-from tests.conftest import ScriptedModel, tool_call
+from tests.conftest import FailingModel, ScriptedModel, tool_call
 
 FACTS = ProductFacts(
     category="Chairs",
@@ -196,3 +196,14 @@ def test_csv_endpoint_drops_foreign_image_urls(api):
     r = api.post("/api/studio/shopify.csv", json=body)
     assert r.status_code == 200 and r.headers["content-type"].startswith("text/csv")
     assert next(csv.DictReader(io.StringIO(r.text)))["Image Src"] == ""
+
+
+def test_studio_calls_fall_back_to_the_second_model(monkeypatch):
+    from app.config import get_settings
+
+    backup = ScriptedModel(script=[tool_call("Claims", {"unsupported": []})])
+    fallback_name = get_settings().gemini_fallback_model
+    monkeypatch.setattr(pipeline, "make_llm", lambda p, m: backup if m == fallback_name else FailingModel())
+    usage = pipeline.Usage()
+    found = asyncio.run(pipeline.check_claims(make_copy(), FACTS, "(none)", usage))
+    assert found == [] and usage.calls == 1

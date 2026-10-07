@@ -33,6 +33,16 @@ class ScriptedModel(BaseChatModel):
         return ChatResult(generations=[ChatGeneration(message=make(self.calls))])
 
 
+class FailingModel(ScriptedModel):
+    """Behaves like a provider that is overloaded."""
+
+    script: list = []
+
+    def _generate(self, messages, stop=None, run_manager=None, **kwargs):
+        self.calls += 1
+        raise RuntimeError("503 UNAVAILABLE: model is experiencing high demand")
+
+
 def tool_call(name: str, args: dict) -> Callable[[int], AIMessage]:
     return lambda n: AIMessage(content="", tool_calls=[{"name": name, "args": args, "id": f"call_{n}"}])
 

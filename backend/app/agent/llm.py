@@ -62,6 +62,15 @@ def make_llm(provider: str | None = None, model: str | None = None) -> BaseChatM
     )
 
 
+def fallback_model(provider: str, model: str) -> str | None:
+    """A second Gemini model for when the first is overloaded (503), times out, or is out of quota (429).
+
+    Free-tier quotas are per model, so the fallback also has its own daily allowance.
+    """
+    fallback = get_settings().gemini_fallback_model
+    return fallback if provider == "gemini" and fallback and fallback != model else None
+
+
 def cost_usd(model: str, input_tokens: int, output_tokens: int) -> float | None:
     price = PRICES.get(model)
     if not price:

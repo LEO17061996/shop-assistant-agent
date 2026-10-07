@@ -279,6 +279,8 @@ async def main() -> None:
     ap.add_argument("--retry-errors", action="store_true", help="re-run only the cases that errored last time")
     ap.add_argument("--no-claim-check", action="store_true", help="ablation: rule checks only, no LLM claim check")
     args = ap.parse_args()
+    # Measure the model under test only; a silent switch to the fallback would mix two models' answers
+    get_settings().gemini_fallback_model = None
 
     products = sample(args.n)
     judge = judge_llm()
