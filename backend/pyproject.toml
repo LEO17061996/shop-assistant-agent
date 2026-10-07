@@ -1,0 +1,18 @@
+[project]
+name = "shop-assistant-agent"
+version = "0.1.0"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+filterwarnings = ["ignore::UserWarning:huggingface_hub.*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+# Prompts and tool docstrings are long natural-language lines; the formatter handles code width
+ignore = ["E501"]

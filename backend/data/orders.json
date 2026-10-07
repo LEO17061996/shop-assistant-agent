@@ -1,0 +1,326 @@
+[
+  {
+    "order_id": "KH-10400",
+    "email": "customer1@example.com",
+    "country": "US",
+    "status": "processing",
+    "carrier": null,
+    "tracking": null,
+    "eta": null,
+    "placed_at": "2026-09-01",
+    "items": [
+      {
+        "product_id": "B0719SNKSY",
+        "name": "Amazon Brand – Rivet West, Mid-Century, Oak Platform Bed With Inlays, Queen (86\"L), Dark Oak Finish",
+        "qty": 1,
+        "price_usd": 573.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10407",
+    "email": "customer2@example.com",
+    "country": "US",
+    "status": "shipped",
+    "carrier": "UPS",
+    "tracking": "TRK003673092",
+    "eta": "2026-10-12",
+    "placed_at": "2026-09-02",
+    "items": [
+      {
+        "product_id": "B07RKK943W",
+        "name": "Amazon Brand - Solimo Costa Engineered Wood Queen Bed with Storage (Walnut)",
+        "qty": 1,
+        "price_usd": 979.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10414",
+    "email": "customer3@example.com",
+    "country": "UK",
+    "status": "shipped",
+    "carrier": "Royal Mail",
+    "tracking": "TRK004591365",
+    "eta": "2026-10-15",
+    "placed_at": "2026-09-03",
+    "items": [
+      {
+        "product_id": "B07MDJXWGN",
+        "name": "AmazonBasics Classic, Adjustable, Swivel Office Desk Chair with Casters and Twill Fabric, Navy",
+        "qty": 1,
+        "price_usd": 142.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10421",
+    "email": "customer4@example.com",
+    "country": "US",
+    "status": "delivered",
+    "carrier": "FedEx",
+    "tracking": "TRK005509638",
+    "eta": "2026-09-28",
+    "placed_at": "2026-09-04",
+    "items": [
+      {
+        "product_id": "B07WC6LZ34",
+        "name": "Stone & Beam Industrial Farmhouse Barn Outdoor Wall Sconce with Light Bulb - 10 x 12.72 x 9.72 Inches, Antique Bronze (Renewed)",
+        "qty": 1,
+        "price_usd": 115.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10428",
+    "email": "customer5@example.com",
+    "country": "UK",
+    "status": "held_at_customs",
+    "carrier": "DHL",
+    "tracking": "TRK006427911",
+    "eta": null,
+    "placed_at": "2026-09-05",
+    "items": [
+      {
+        "product_id": "B07B4DB65T",
+        "name": "Amazon Brand – Rivet Cliff Mid-Century Modern Round Tufted Velvet Pouf Ottoman, 39\"W, Grey",
+        "qty": 1,
+        "price_usd": 110.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10435",
+    "email": "customer6@example.com",
+    "country": "US",
+    "status": "cancelled",
+    "carrier": null,
+    "tracking": null,
+    "eta": null,
+    "placed_at": "2026-09-06",
+    "items": [
+      {
+        "product_id": "B088S8VLMW",
+        "name": "Stone & Beam Bradbury Chesterfield Classic Ottoman, 30\"W, Slate (Renewed)",
+        "qty": 1,
+        "price_usd": 172.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10442",
+    "email": "customer7@example.com",
+    "country": "US",
+    "status": "processing",
+    "carrier": null,
+    "tracking": null,
+    "eta": null,
+    "placed_at": "2026-09-07",
+    "items": [
+      {
+        "product_id": "B07S9FP4B1",
+        "name": "AmazonBasics Hanging Planter, Round - White/Black (2-Pack)",
+        "qty": 1,
+        "price_usd": 73.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10449",
+    "email": "customer8@example.com",
+    "country": "US",
+    "status": "shipped",
+    "carrier": "UPS",
+    "tracking": "TRK009182730",
+    "eta": "2026-10-12",
+    "placed_at": "2026-09-08",
+    "items": [
+      {
+        "product_id": "B07MFYTP6L",
+        "name": "Ravenna Home Esquire Rug, 5'W x 7'6\"L, Feathery Ogee Design",
+        "qty": 1,
+        "price_usd": 297.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10456",
+    "email": "customer9@example.com",
+    "country": "UK",
+    "status": "shipped",
+    "carrier": "Royal Mail",
+    "tracking": "TRK010101003",
+    "eta": "2026-10-15",
+    "placed_at": "2026-09-09",
+    "items": [
+      {
+        "product_id": "B07L9BVBCJ",
+        "name": "AmazonBasics 2-Tier Stackable Storage Shelf",
+        "qty": 1,
+        "price_usd": 325.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10463",
+    "email": "customer10@example.com",
+    "country": "US",
+    "status": "delivered",
+    "carrier": "FedEx",
+    "tracking": "TRK011019276",
+    "eta": "2026-09-28",
+    "placed_at": "2026-09-10",
+    "items": [
+      {
+        "product_id": "B075X4QMX3",
+        "name": "Stone & Beam Westport Modern Nailhead Upholstered Sofa, 87\"W, Linen",
+        "qty": 1,
+        "price_usd": 1168.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10470",
+    "email": "customer11@example.com",
+    "country": "UK",
+    "status": "held_at_customs",
+    "carrier": "DHL",
+    "tracking": "TRK011937549",
+    "eta": null,
+    "placed_at": "2026-09-11",
+    "items": [
+      {
+        "product_id": "B000HBYLBQ",
+        "name": "Strathwood Ryer 48-Inch Round Aluminum Dining Table",
+        "qty": 1,
+        "price_usd": 479.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10477",
+    "email": "customer12@example.com",
+    "country": "US",
+    "status": "cancelled",
+    "carrier": null,
+    "tracking": null,
+    "eta": null,
+    "placed_at": "2026-09-12",
+    "items": [
+      {
+        "product_id": "B07YBHC881",
+        "name": "AmazonBasics Kid Table Set with Dry Erasable Table Top",
+        "qty": 1,
+        "price_usd": 173.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10484",
+    "email": "customer13@example.com",
+    "country": "US",
+    "status": "processing",
+    "carrier": null,
+    "tracking": null,
+    "eta": null,
+    "placed_at": "2026-09-13",
+    "items": [
+      {
+        "product_id": "B073P6BG9P",
+        "name": "Amazon Brand – Rivet 9-Piece Modern Radio City Color Tinted Print on Wood, 48\" x 48\"",
+        "qty": 1,
+        "price_usd": 86.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10491",
+    "email": "customer14@example.com",
+    "country": "US",
+    "status": "shipped",
+    "carrier": "UPS",
+    "tracking": "TRK014692368",
+    "eta": "2026-10-12",
+    "placed_at": "2026-09-14",
+    "items": [
+      {
+        "product_id": "B07QCQ33GW",
+        "name": "Stone & Beam Canton King Button-Tufted Headboard, 80\"W, Lagoon",
+        "qty": 1,
+        "price_usd": 625.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10498",
+    "email": "customer15@example.com",
+    "country": "UK",
+    "status": "shipped",
+    "carrier": "Royal Mail",
+    "tracking": "TRK015610641",
+    "eta": "2026-10-15",
+    "placed_at": "2026-09-15",
+    "items": [
+      {
+        "product_id": "B075YV7TMR",
+        "name": "Amazon Brand – Rivet Tina Mid-Century Modern Curve Back Dining Room Kitchen Chairs, 25\"W x 36\"H, Light Grey, Set of 2",
+        "qty": 1,
+        "price_usd": 193.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10505",
+    "email": "customer16@example.com",
+    "country": "US",
+    "status": "delivered",
+    "carrier": "FedEx",
+    "tracking": "TRK016528914",
+    "eta": "2026-09-28",
+    "placed_at": "2026-09-16",
+    "items": [
+      {
+        "product_id": "B07DBJYDLK",
+        "name": "Ravenna Home Classic Fabric Semi-Flushmount Ceiling Pendant Light Fixture with 3 LED Light Bulbs - 15 x 15 x 11.5 Inches, Brushed Nickel",
+        "qty": 1,
+        "price_usd": 50.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10512",
+    "email": "customer17@example.com",
+    "country": "UK",
+    "status": "held_at_customs",
+    "carrier": "DHL",
+    "tracking": "TRK017447187",
+    "eta": null,
+    "placed_at": "2026-09-17",
+    "items": [
+      {
+        "product_id": "B07HSK9SVW",
+        "name": "Amazon Brand – Rivet Mirror Wall Shelf, 21.75\"H, Natural",
+        "qty": 1,
+        "price_usd": 168.99
+      }
+    ]
+  },
+  {
+    "order_id": "KH-10519",
+    "email": "customer18@example.com",
+    "country": "US",
+    "status": "cancelled",
+    "carrier": null,
+    "tracking": null,
+    "eta": null,
+    "placed_at": "2026-09-18",
+    "items": [
+      {
+        "product_id": "B082QCPZDP",
+        "name": "Amazon Brand – Rivet Ross Modern Fabric Lift-Top Storage Ottoman Pouf, 17.7\"W, Marshmallow",
+        "qty": 1,
+        "price_usd": 42.99
+      }
+    ]
+  }
+]

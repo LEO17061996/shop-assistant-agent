@@ -1,0 +1,9 @@
+.env
+.qdrant
+.cache
+data/raw
+eval
+tests
+**/__pycache__
+.pytest_cache
+.ruff_cache
